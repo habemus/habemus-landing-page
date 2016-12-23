@@ -6,7 +6,12 @@ var autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('less', function () {
-  return gulp.src('./src/less/**/*.less') //gera fonte de arquivos
+  var srcLess = [
+    './src/less/pages/**/index.less',
+    './src/less/pages/*.less'
+  ];
+  
+  return gulp.src(srcLess) //gera fonte de arquivos
     .pipe(less({ //pega a fonte e joga em algum lugar - less é um cano com engrenagens dentro
     }))
     .pipe(autoprefixer({

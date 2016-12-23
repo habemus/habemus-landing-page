@@ -1,0 +1,30 @@
+// buttons
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 24px;
+  line-height: 50px;
+  background-color: @habemus-green-light;
+  color: @habemus-dark;
+  border: 1px solid @habemus-green-light;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:hover {
+    background-color: @habemus-green-dark;
+    border: 1px solid @habemus-green-dark;
+  }
+  
+  &.gray {
+    background-color: @habemus-gray-light;
+    border: 1px solid @habemus-gray-light; 
+    
+    &:hover {
+      background-color: @habemus-gray-light-2;
+      border: 1px solid @habemus-gray-light-2;
+    }
+  }
+}

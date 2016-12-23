@@ -1,0 +1,141 @@
+/*
+** SECTION TEMPLATES
+*/
+
+#section-templates {
+  background-color: @habemus-dark;
+  padding: 90px 0;
+  
+  article {
+    color: @habemus-off-white;
+    
+    h1 {
+      color: @habemus-green-light;
+      margin-bottom: 0;
+    }
+    
+    h2 {
+      margin-bottom: 40px;
+    }
+    
+    > p {
+      max-width: 570px;
+      margin: 0 auto;
+    }
+  }
+  
+  .templates-gallery {
+    margin: 60px auto;
+    width: 90%;
+    max-width: @max-width + 96px;
+    border-bottom: 1px solid @habemus-gray-dark;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    figure {
+      position: relative;
+      margin: 0 16px;
+      display: block;
+      width: 282px;
+      /*box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.2);*/
+      
+      img {
+        display: block;
+        width: 100%;
+        box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+      figcaption {
+        background-color: rgba(255,255,255,0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        opacity: 0;
+        transition: opacity ease 0.3s;
+        
+        h1 {
+          margin-bottom: 8px;
+          font-size: 16px;
+        }
+        
+        .buttons {
+          width: 60%;
+          margin: 6px 0;
+          
+          .button {
+            width: 100%;
+            margin: 6px 0;
+          }
+        }
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// WIDTH FROM 361 TO 680
+@media screen and (max-width: 1062px) {
+  #section-templates {
+    
+    .templates-gallery {
+      margin: 60px auto 0;
+      border-bottom: none;
+      overflow: visible;
+      
+      figure {
+        margin: 16px 16px 124px;
+        
+        figcaption {
+          background-color: transparent;
+          top: -36px;
+          left: 0;
+          right: 0;
+          bottom: -76px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          
+          opacity: 1;
+          transition: opacity ease 0.3s;
+          
+          h1 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: @habemus-off-white;
+          }
+          
+          .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            width: 100%;
+            
+            .button {
+              width: 48%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

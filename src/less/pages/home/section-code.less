@@ -1,0 +1,44 @@
+/*
+** SECTION CODE
+*/
+
+#section-code {
+  padding-top: 92px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#section-code > article > p {
+  max-width: 700px;
+  margin: 0 auto;
+  
+}
+
+#webeditor-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 70px;
+  border-bottom: 1px solid #e8e8e8;
+  
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 55%;
+    background-color: @habemus-green-dark;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    max-width: @max-width;
+    /* box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;*/
+    box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+  }
+}
