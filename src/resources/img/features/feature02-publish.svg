@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px"
+	 height="184px" viewBox="0 0 320 184" enable-background="new 0 0 320 184" xml:space="preserve">
+<symbol  id="arrow-pastas" viewBox="-4.354 -1.707 8.707 5.061">
+	<g>
+		<polyline fill="none" stroke="#3C3C3C" stroke-miterlimit="10" points="-4,3 -0.001,-1 4,3 		"/>
+	</g>
+</symbol>
+<symbol  id="arrow2" viewBox="-4.354 -2.53 8.707 5.061">
+	<g>
+		<g>
+			<polyline fill="none" stroke="#F5F5F5" stroke-miterlimit="10" points="-4,2.177 -0.001,-1.823 4,2.177 			"/>
+		</g>
+	</g>
+</symbol>
+<g id="Camada_2">
+</g>
+<g id="Camada_6" display="none">
+</g>
+<g id="Camada_6_cópia" display="none">
+</g>
+<g id="Camada_7" display="none">
+</g>
+<g id="Camada_9" display="none">
+</g>
+<g id="Camada_5">
+</g>
+<g id="Camada_1">
+</g>
+<g id="animacao">
+</g>
+<g id="Camada_4">
+	<g>
+		<polyline fill="#464849" points="287,56.073 37.59,56.073 37.59,184 287,184 		"/>
+		<g>
+			<g>
+				<g>
+					<g>
+						<circle fill="#FF6251" cx="45.348" cy="43.174" r="2.204"/>
+						<circle fill="#FFBE01" cx="52.255" cy="43.174" r="2.204"/>
+						<circle fill="#01CA00" cx="59.161" cy="43.174" r="2.204"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<rect x="38" y="51" fill="#E8EBEC" width="249" height="10"/>
+		<g>
+			<path fill="#D0D6D8" d="M44,32c-4.963,0-9,4.038-9,9v143h3V41c0-3.3,2.7-6,6-6h243v-3H44z"/>
+		</g>
+	</g>
+	<g>
+		<rect x="49" y="118" fill="#6FC9DA" width="27" height="5"/>
+		<rect x="80" y="118" fill="#FFFFFF" width="37" height="5"/>
+		<rect x="121" y="118" fill="#FF3E86" width="27" height="5"/>
+		<rect x="154" y="118" fill="#32C48E" width="42" height="5"/>
+		<rect x="202.102" y="118" fill="#6FC9DA" width="32.877" height="5"/>
+		<rect x="241" y="118" fill="#F2F2F2" width="27" height="5"/>
+		<rect x="274" y="118" fill="#32C48E" width="13" height="5"/>
+	</g>
+</g>
+</svg>
