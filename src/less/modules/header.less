@@ -8,39 +8,39 @@ header {
   width: 100%;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  
+
   #header-container {
     max-width: 1366px;
     margin: 0 auto;
     padding: 38px 36px 24px;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+
     #logo-dark {
       display: block;
       width: 126px;
       opacity: 1;
       transition: opacity 0.3s linear;
     }
-    
+
     #menu {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;  
+      align-items: center;
       font-size: 16px;
       color: @habemus-gray-dark;
       letter-spacing: 1px;
-      
+
       #nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        
+
         a {
           display: block;
           text-decoration: none;
@@ -48,18 +48,18 @@ header {
           padding: 2px;
           transition: all 0.3s ease;
           color: @habemus-gray-dark;
-          
+
           &:hover {
             color: @habemus-dark;
           }
-          
+
           &.active {
             color: @habemus-dark;
           }
         }
-        
+
       }
-      
+
       .lang {
         margin-left: 24px;
         font-size: 12px;
@@ -67,69 +67,70 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        
+
         div {
           cursor: pointer;
           padding: 12px;
-          
+
           &:hover {
             color: @habemus-dark;
           }
-          
+
           &.active {
             color: @habemus-dark;
           }
         }
       }
     }
-    
+
+
     // responsive header for small screens
     #menu-right-command {
       display: none;
       cursor: pointer;
-  
+
       svg line {
         stroke: @habemus-gray-dark;
-  
+
         -webkit-transform:rotate(0) translateY(0) translateX(0);
         transform:rotate(0) translateY(0) translateX(0);
         opacity:1;
         -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
         transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out, stroke 0.4s;
-  
+
         &:nth-of-type(1) {
           -webkit-transform-origin: 1% 1%;
           transform-origin: 1% 1%;
         }
-  
+
         &:nth-of-type(3) {
           -webkit-transform-origin: 1% 1%;
           transform-origin: 1% 1%;
         }
-  
+
       }
-  
+
       &.black {
         svg line {
         stroke: @habemus-gray-dark;
         }
       }
-  
+
       &.close-command {
-  
+
         svg line {
           stroke: @habemus-gray-dark;
-  
+
           &:nth-of-type(1) {
-  
+
             -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
             transform:rotate(45deg) translateY(0em) translateX(0em);
           }
-  
+
           &:nth-of-type(2) {
             opacity:0;
           }
-  
+
           &:nth-of-type(3) {
             -webkit-transform:rotate(-45deg) translateY(0em) translateX(0em);
             transform:rotate(-45deg) translateY(0em) translateX(0em);
@@ -138,35 +139,52 @@ header {
       }
     }
   }
-  
+
   &.smaller {
     background-color: white;
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    
+
     #header-container {
       padding: 14px 36px;
     }
   }
+
+  // white letters on header
+  &.light {
+
+    #header-container #menu #nav a {
+      color: #c5c5c5;
+      &.active {
+        color: #ffffff;
+      }
+    }
+
+    #header-container #menu .lang div {
+      color: #c5c5c5;
+    }
+
+  }
+
 }
 
 // WIDTH FROM 361 TO 680
 @media screen and (min-width: 361px) and (max-width: 800px) {
-  
+
   header {
     #header-container {
       padding: 24px 24px 0px;
-      
+
       #menu {
         display: none;
       }
-      
+
       #menu-right-command {
         display: block;
       }
     }
-    
+
     &.smaller {
-      
+
       #header-container {
         padding: 2px 24px;
       }
@@ -176,19 +194,19 @@ header {
 
 // WIDTH FROM 0 TO 360
 @media screen and (max-width: 360px) {
-  
+
   header {
     #header-container {
       padding: 12px 12px 0px;
-  
+
       #logo-dark {
         width: 100px;
       }
-  
+
       #menu {
         display: none;
       }
-  
+
       #menu-right-command {
         display: block;
       }
@@ -199,7 +217,6 @@ header {
       }
     }
   }
+
+
 }
-
-
-
