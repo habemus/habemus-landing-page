@@ -30,12 +30,15 @@
 }
 
 .details article {
-  width: 380px;
-  padding: 55px;
+  width: 100%;
+  max-width: 390px;
+  min-width: 220px;
+  padding: 45px;
 }
 
 .details article img {
-  width: 320px;
+  width: 82%;
+  min-width: 220px;
   display: block;
   margin: 0 auto 32px auto;
 }
@@ -44,4 +47,15 @@ article {
   width: 86%;
   margin: 0 auto;
   max-width: @max-width;
+}
+
+// WIDTH FROM 360
+@media screen and (max-width: 360px) {
+ .details article {
+    padding: 25px 0;
+  }
+  
+  .details article img {
+    width: 100%;
+  } 
 }
