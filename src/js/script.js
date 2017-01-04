@@ -45,6 +45,7 @@ $(function(){
 $(document).ready(function() {
   
   var words = [
+    "web",
     "empoderamento", 
     "criatividade", 
     "solução",
@@ -89,7 +90,7 @@ $(document).ready(function() {
     "🎈",
     "💻",
   ];
-  $(".words").hover(function() {
+  $(".words").on("mouseenter", function() {
     console.log("clicou");
     var item = words[Math.floor(Math.random()*words.length)];
     $("#word-change").text(item);

@@ -3,11 +3,25 @@ footer {
   font-size: 14px;
   text-align: left;
   
+  a {
+    font-family: "Open Sans", sans-serif;
+    color: @habemus-off-white;
+    font-weight: 400;
+    padding: 4px 0;
+    display: inline-block;
+    transition: color ease 0.3s;
+    
+    &:hover {
+      color: @habemus-gray-light;
+    }
+  }
+  
   .site-map {
     background-color: @habemus-dark;
     width: 100%;
     
     .container {
+      width: 90%;
       padding: 40px 0;
       max-width: @max-width;
       margin: 0 auto;
@@ -15,9 +29,9 @@ footer {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center; 
+      align-items: flex-start; 
       
-      .left {
+      .map {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -31,16 +45,26 @@ footer {
             font-weight: 600;
             
             &:first-child {
-              margin-bottom: 8px;
-            }
-            
-            a {
-              font-family: "Open Sans", sans-serif;
-              color: @habemus-off-white;
-              font-weight: 400;
-              padding: 2px 0;
+              margin: 8px 0;
             }
           }
+        }
+      }
+      
+      .language-buttons {
+        
+        a {
+          padding: 8px 8px 8px 0;
+          
+          &.active {
+            color: white;
+            font-weight: 600;
+          }
+        }
+        
+        span {
+          display: inline-block;
+          padding-right: 8px;
         }
       }
     }
@@ -53,6 +77,7 @@ footer {
     
     .container {
       max-width: @max-width;
+      width: 90%;
       margin: 0 auto;
       
       display: flex;
@@ -69,11 +94,11 @@ footer {
         
         span {
           display: block;
-          padding-right: 4px;
+          padding-right: 6px;
           
           &#word-change {
             color: @habemus-green-light;
-            width: 140px;
+            width: 170px;
           }
         }
         
@@ -88,18 +113,60 @@ footer {
         }
       }
       
-      a {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        text-decoration: none;
-        color: @habemus-off-white;
+      .legal {
+        a {
+          padding: 24px 0; 
+        }
+      }
+    }
+  }
+}
+  
+// WIDTH FROM 0 TO 680
+@media screen and (max-width: 800px) {
+
+  footer {
+    .site-map {
+      .container {
+        flex-direction: column;
+        width: 86%;
+
+        .map {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          
+          nav {
+            width: 130px;
+            margin-bottom: 40px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    
+    .site-info {
+      .container {
+        flex-direction: column-reverse;
+        width: 86%;
+        
+        .words {
+          padding: 12px 0;
+          
+          #word-change {
+            display: none;
+          }
+        }
+        
+        .legal {
+          a {
+            padding: 12px 0;
+          }
+        }
       }
     }
   }
 }
 
-// WIDTH FROM 361 TO 680
-@media screen and (min-width: 361px) and (max-width: 680px) {
-  
+// WIDTH FROM 0 TO 361
+@media screen and (max-width: 361px) {
 }
-  
