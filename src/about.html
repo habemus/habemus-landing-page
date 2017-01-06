@@ -8,7 +8,7 @@
     <!-- google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600|Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about.css">
 
   </head>
   <body>
@@ -43,16 +43,56 @@
       </div>
     </header>
 
-      <div class="contact-opening">
-        <h1>Contato</h1>
+      <div class="about-opening">
+        <h1>Sobre nós</h1>
       </div>
-      <section class="contact-content">
-        <section class="contact-form">
-          <p>Em que podemos ajudar?</p>
-          <p>Mande sugestões, dúvidas, bugs, comentários.</p>
-          <p>Queremos muito te ouvir!</p>
-          <form action="http://formspree.io/lucianaheuko@gmail.com" method="post">
-            <input type="hidden" name="_subject" value="Novo contato!" />
+      <section class="about-content-container">
+        <div class="about-content">
+          <p><strong>Somos apaixonados pela web <span><3</span></strong></p>
+          <br>
+          <p>Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.</p>
+          <br>
+          <p>Somos uma equipe de pessoas sonhadoras movidas pela ideia de que é possível transformar a realidade empoderando mais gente a criar tecnologia. <a href="http://blog.habemus.website/2016/03/07/nao-esconder-o-codigo.html" target="_blank">Leia mais</a>
+          </p>
+        </div>
+      </section>
+      <section class="about-team">
+        <h2>Nosso Time</h2>
+        <div class="team-members">
+          <article>
+            <a href="https://www.linkedin.com/in/luciana-heuko-a02b0870/" target="_blank">
+              <img src="resources/img/team/luciana-heuko.svg" alt="alternative text" >
+            </a>
+            <h1>Luciana Heuko</h1>
+            <h2>cofundadora, designer, programadora, educadora</h2>
+            <p>
+              When I was graduating college, a mentor told me to ﬁnd a job that didn’t feel like a job. Venture Capital is that job for me. I wake up every day excited to work with amazing founders.
+            </p>
+          </article>
+          <article>
+            <a href="https://www.linkedin.com/in/simon-fan-a762ab6b/" target="_blank">
+              <img src="resources/img/team/simon-fan.svg" alt="alternative text" >
+            </a>
+            <h1>Simon Fan</h1>
+            <h2>cofundador, engenheiro de software, ﬁlósofo</h2>
+            <p>
+              When I was graduating college, a mentor told me to ﬁnd a job that didn’t feel like a job. Venture Capital is that job for me. I wake up every day excited to work with amazing founders.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="about-form-container">
+        <div class="about-form">
+          <h2>Entre para o nosso time!</h2>
+          <p>
+            Estamos em busca de pessoas que também amem criar tecnologias web e que queiram agregar amor ao nosso time!
+          </p>
+          <br>
+          <p>
+            Mande uma mensagem pra gente e bora bater um papo \o/
+          </p>
+          <form action="http://formspree.io/hello@habem.us" method="post">
+            <input type="hidden" name="_subject" value="Novo membro para o time!" />
             <input type="hidden" name="_cc" value="simonxd@gmail.com" />
             <div
               class="field-container"
@@ -61,7 +101,7 @@
               <input
                 type="text"
                 name="name"
-                placeholder="name" data-i18n="[placeholder]namePlaceholder">
+              >
               <div class="field-error-message"></div>
             </div>
             <div
@@ -71,62 +111,39 @@
               <input
                 type="text"
                 name="email"
-                placeholder="e-mail" data-i18n="[placeholder]mailPlaceholder">
+              >
               <div class="field-error-message"></div>
             </div>
             <div
               class="field-container"
               validate-on="change">
-              <label data-i18n="msg">mensagem</label><br>
+              <label data-i18n="social">linkedin e/ou facebook</label><br>
+              <input
+                type="text"
+                name="social"
+              >
+              <div class="field-error-message"></div>
+            </div>
+            <div
+              class="field-container"
+              validate-on="change">
+              <label data-i18n="msg">
+                Conta pra gente um pouco sobre você! <br>
+                Qual é a sua história? Como conheceu a habemus? <br>
+                Por que te interessa trabalhar conosco?
+              </label><br>
               <textarea
                 type="text"
                 name="message"
-                placeholder="message" data-i18n="[placeholder]msgPlaceholder"></textarea>
+              ></textarea>
               <div class="field-error-message"></div>
             </div>
             
             <button type="submit" class="button" data-i18n="submitButton">enviar mensagem</button>
             <div class="form-status"> </div>
           </form>
-        </section>
-        <section class="contact-info">
-          <dl>
-            <dt>E-mail</dt>
-            <dd>hello@habem.us</dd>
-          </dl>
-          <dl>
-            <dt>Localização</dt>
-            <dd>Rua Bela Cintra, 419</dd>
-            <dd>São Paulo - SP</dd>
-            <dd>Brasil</dd>
-          </dl>
-          <dl>
-            <dt>Siga-nos</dt>
-            <dd>
-              <a href="https://www.facebook.com/habemusplatform" target="_blank">
-                <img src="resources/img/icons/facebook.svg" alt="alternative text" >
-                facebook
-              </a>
-            </dd>
-            <dd>
-              <a href="https://twitter.com/habemus_web" target="_blank">
-                <img src="resources/img/icons/twitter.svg" alt="alternative text" >
-                twitter
-              </a>
-            </dd>
-            <dd>
-              <a href="https://github.com/habemus" target="_blank">
-                <img src="resources/img/icons/github.svg" alt="alternative text" >
-                github
-              </a>
-            </dd>
-          </dl>
-          <dl>
-            <a href="http://example.com">Entre para o nosso time!</a>
-          </dl>
-        </section>
+        </div>
       </section>
-      
       <footer>
       <section class="site-map">
         <div class="container">
@@ -144,7 +161,7 @@
                 <li>Empresa</li>
                 <li><a href="http://blog.habemus.website" target="_blank">Blog</a></li>
                 <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="contact.html">Contato</a></li>
+                <li><a href="about.html">Contato</a></li>
                 <li><a href="about.html#work-with-us">Entre para o time</a></li>
               </ul>
             </nav>
