@@ -1,0 +1,56 @@
+form {
+  text-align: left;
+}
+
+
+// form field container
+.field-container {
+  margin-bottom: 24px;
+
+    label {
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    input {
+      height: 36px;
+      font-size: 12px;
+      padding: 0 8px;
+      margin: 4px 0;
+      border: 1px solid @habemus-gray-light;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+    }
+
+    textarea {
+      height: 72px;
+      font-size: 12px;
+      padding: 8px;
+      margin: 4px 0 -2px 0;
+      border: 1px solid @habemus-gray-light;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+  .field-error-message {
+    display: none;
+  }
+
+  &.error {
+    input {
+      border: 1px solid @habemus-error;
+    }
+
+    textarea {
+      border: 1px solid @habemus-error;
+    }
+
+    .field-error-message {
+      display: block;
+
+      color: @habemus-error;
+      font-size: 12px;
+    }
+  }
+}
