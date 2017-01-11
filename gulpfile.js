@@ -34,3 +34,5 @@ gulp.task('browser-sync', function() {
 
     gulp.watch(["src/**/*.html", 'src/**/*.css', 'src/**/*.js'], browserSync.reload);
 });
+
+require('./tasks/translate')(gulp);

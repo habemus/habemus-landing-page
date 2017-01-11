@@ -1,3 +1,6 @@
 node_modules
 src/css
 .DS_Store
+tmp*
+.tmp
+bower_components
