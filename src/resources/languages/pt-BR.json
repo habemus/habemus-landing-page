@@ -1,8 +1,12 @@
 {
-  "website": {
-    "title": "Título teste"
+  "home": {
+    "build": "construa"
   },
-  "test": {
-    "title": "Outro título teste"
+  "nav": {
+    "blog": "blog",
+    "contact": "contato",
+    "home": "home",
+    "login": "login",
+    "templates": "templates"
   }
 }

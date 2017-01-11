@@ -22,11 +22,11 @@
         <div id="menu">
           <nav>
             <ul>
-              <li><a href="index.html" class="menu-item active" data-i18n="navHome">home</a></li>
-              <li><a href="templates.html" class="menu-item" data-i18n="navMission">templates</a></li>
-              <li><a href="http://blog.habemus.website" class="menu-item" data-i18n="navMission">blog</a></li>
-              <li><a href="contact.html" class="menu-item" data-i18n="navContact">contact</a></li>
-              <li><a href="" class="open-login-form" data-i18n="navLogin">login</a></li>
+              <li><a href="index.html" class="menu-item active">{{ nav.home }}</a></li>
+              <li><a href="templates.html" class="menu-item">{{ nav.templates }}</a></li>
+              <li><a href="http://blog.habemus.website" class="menu-item">{{ nav.blog }}</a></li>
+              <li><a href="contact.html" class="menu-item">{{ nav.contact }}</a></li>
+              <li><a href="" class="open-login-form">{{ nav.login }}</a></li>
             </ul>
             <div id="menu-overlay"></div>
           </nav>
@@ -45,7 +45,7 @@
     </header>
     <section id="section-home">
       <div>
-        <h2>Construa</h2>
+        <h2>{{ home.build }}</h2>
         <h1><span id="typed"></span></h1>
         <h2>com a Habemus: a plataforma online para desenvolver e hospedar seus websites.</h2>
       </div>

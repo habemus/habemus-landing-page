@@ -22,6 +22,9 @@ function isBowerComponent(file) {
 
 module.exports = function (gulp) {
   
+  /**
+   * Generates translated version of websites
+   */
   gulp.task('translate', function () {
     
     function shouldTranslate(file) {
@@ -32,16 +35,20 @@ module.exports = function (gulp) {
     
     var mainLangCode = 'en-US';
     
-    var languages = fs.readdirSync(SRC_DIR + '/resources/languages').map((filename) => {
-      
-      var langCode = path.basename(filename, '.json');
-      
-      return {
-        code: langCode,
-        translations: require(SRC_DIR + '/resources/languages/' + filename),
-        isMain: langCode === mainLangCode,
-      };
-    });
+    var languages = fs.readdirSync(SRC_DIR + '/resources/languages')
+      .filter((contentName) => {
+        return /\.json$/.test(contentName)
+      })
+      .map((filename) => {
+        
+        var langCode = path.basename(filename, '.json');
+        
+        return {
+          code: langCode,
+          translations: require(SRC_DIR + '/resources/languages/' + filename),
+          isMain: langCode === mainLangCode,
+        };
+      });
     
     var translationStreams = languages.map((lang) => {
       
@@ -58,6 +65,9 @@ module.exports = function (gulp) {
     return mergeStream.apply(null, translationStreams);
   });
   
+  /**
+   * Prepares translation files
+   */
   gulp.task('prepare-translations', function () {
     
     var translatableFiles = [
@@ -78,7 +88,7 @@ module.exports = function (gulp) {
           }
         ],
         patterns: [
-          /{{\s*(.+?)\s*}}/g,
+          /{{\s*([0-9a-zA-Z.]+?)\s*}}/g,
         ]
       }))
       .pipe(gulp.dest(SRC_DIR + '/resources/languages/tmp'));
