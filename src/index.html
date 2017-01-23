@@ -22,18 +22,25 @@
         <div id="menu">
           <nav>
             <ul>
-              <li><a href="index.html" class="menu-item active">{{ nav.home }}</a></li>
-              <li><a href="templates.html" class="menu-item">{{ nav.templates }}</a></li>
-              <li><a href="http://blog.habemus.website" class="menu-item">{{ nav.blog }}</a></li>
-              <li><a href="contact.html" class="menu-item">{{ nav.contact }}</a></li>
-              <li><a href="" class="open-login-form">{{ nav.login }}</a></li>
+              <li><a href="index.html" class="menu-item active">{{ t.nav.home }}</a></li>
+              <li><a href="templates.html" class="menu-item">{{ t.nav.templates }}</a></li>
+              <li><a href="http://blog.habemus.website" class="menu-item">{{ t.nav.blog }}</a></li>
+              <li><a href="contact.html" class="menu-item">{{ t.nav.contact }}</a></li>
+              <li><a href="#login" class="open-login-form">{{ t.nav.login }}</a></li>
             </ul>
             <div id="menu-overlay"></div>
           </nav>
           <div class="language-buttons">
-            <a href="http://example.com" class="active">Pt </a>
+            {% if lang === "pt-BR" %}
+            <a href="/pt-BR" class="active">Pt </a>
             <span> | </span>
-            <a href="http://example.com"> En</a>
+            <a href="/"> En</a>
+            {% endif %}
+            {% if lang === "en-US" %}
+            <a href="/pt-BR">Pt </a>
+            <span> | </span>
+            <a href="/" class="active"> En</a>
+            {% endif %}
           </div>
         </div>
         <div id="menu-right-command">
@@ -45,7 +52,7 @@
     </header>
     <section id="section-home">
       <div>
-        <h2>{{ home.build }}</h2>
+        <h2>{{ t.home.build }}</h2>
         <h1><span id="typed"></span></h1>
         <h2>com a Habemus: a plataforma online para desenvolver e hospedar seus websites.</h2>
       </div>
@@ -278,10 +285,22 @@
         </div>
       </section>
     </footer>
-
+    
+    <script>
+      // TRANSLATIONS USED IN JS
+      {% if lang === 'en-US' %}
+      window.HABEMUS_TRANSLATIONS = {% include "resources/languages/en-US.json" %};
+      {% endif %}
+      
+      {% if lang === 'pt-BR' %}
+      window.HABEMUS_TRANSLATIONS = {% include "resources/languages/pt-BR.json" %};
+      {% endif %}
+    </script>
+    
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="js/lib/typed.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/menu-header.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/random-words-footer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/auth.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

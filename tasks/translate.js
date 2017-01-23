@@ -52,8 +52,13 @@ module.exports = function (gulp) {
     
     var translationStreams = languages.map((lang) => {
       
+      var compileContext = {
+        lang: lang.code,
+        t: lang.translations
+      };
+      
       var stream = gulp.src(SRC_DIR + '/**/*')
-        .pipe(gulpIf(shouldTranslate, nunjucks.compile(lang.translations)));
+        .pipe(gulpIf(shouldTranslate, nunjucks.compile(compileContext)));
         
       if (lang.isMain) {
         return stream.pipe(gulp.dest(DIST_DIR));

@@ -1,5 +1,5 @@
 // animate header on scroll
-(function () {
+$(function () {
   
   var $rightCommand = $("#menu-right-command");
   var $header = $("#header");
@@ -40,4 +40,4 @@
     e.stopPropagation();
   });
   
-})();
+});

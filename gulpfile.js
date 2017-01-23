@@ -35,4 +35,20 @@ gulp.task('browser-sync', function() {
     gulp.watch(["src/**/*.html", 'src/**/*.css', 'src/**/*.js'], browserSync.reload);
 });
 
+gulp.task('develop', function () {
+  browserSync.init({
+    server: {
+      baseDir: "./tmp-translated/"
+    }
+  });
+  
+  gulp.watch("src/less/**/*.less", ['less']); //1 arg: assiste a isso, 2 arg: executa essa lista de tasks
+
+  // translate once css, js or html are changed
+  gulp.watch(["src/**/*.html", 'src/**/*.css', 'src/**/*.js'], [
+    'translate',
+    browserSync.reload
+  ]);
+})
+
 require('./tasks/translate')(gulp);
