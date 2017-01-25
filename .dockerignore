@@ -1,0 +1,11 @@
+node_modules
+src
+tasks
+tmp-*
+.bowerrc
+bower.json
+Dockerfile
+gulpfile.js
+package.json
+README.md
+TODO.md

@@ -4,3 +4,4 @@ src/css
 tmp*
 .tmp
 bower_components
+dist

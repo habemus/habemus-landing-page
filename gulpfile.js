@@ -21,20 +21,6 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./src/css')); //dest é para onde vão as coisas. a pasta
 });
 
-
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./src/"
-        }
-    });
-
-    gulp.watch("src/less/**/*.less", ['less']); //1 arg: assiste a isso, 2 arg: executa essa lista de tasks
-
-    gulp.watch(["src/**/*.html", 'src/**/*.css', 'src/**/*.js'], browserSync.reload);
-});
-
 gulp.task('develop', function () {
   browserSync.init({
     server: {
@@ -52,3 +38,4 @@ gulp.task('develop', function () {
 })
 
 require('./tasks/translate')(gulp);
+require('./tasks/distribute')(gulp);
