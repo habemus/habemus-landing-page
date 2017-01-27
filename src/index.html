@@ -1,200 +1,190 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Habemus</title>
-
-    <!-- google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600|Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="css/style.css">
+    {% include "includes/shared-head.html" %}
     <link rel="stylesheet" href="css/home/index.css">
-
   </head>
+  
   <body>
-    <header id="header">
-      <div id="header-container">
-        <a href="index.html" id="logo">
-          <img id="logo-dark" src="resources/img/logo-dark.svg">
-          <img id="logo-light" src="resources/img/logo-light.svg">
-        </a>
-        <div id="menu">
-          <nav>
-            <ul>
-              <li><a href="index.html" class="menu-item active">{{ t.nav.home }}</a></li>
-              <li><a href="templates.html" class="menu-item">{{ t.nav.templates }}</a></li>
-              <li><a href="http://blog.habemus.website" class="menu-item">{{ t.nav.blog }}</a></li>
-              <li><a href="contact.html" class="menu-item">{{ t.nav.contact }}</a></li>
-              <li><a href="#login" class="open-login-form">{{ t.nav.login }}</a></li>
-            </ul>
-            <div id="menu-overlay"></div>
-          </nav>
-          <div class="language-buttons">
-            {% if lang === "pt-BR" %}
-            <a href="/pt-BR" class="active">Pt </a>
-            <span> | </span>
-            <a href="/"> En</a>
-            {% endif %}
-            {% if lang === "en-US" %}
-            <a href="/pt-BR">Pt </a>
-            <span> | </span>
-            <a href="/" class="active"> En</a>
-            {% endif %}
-          </div>
-        </div>
-        <div id="menu-right-command">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+    {% include "includes/header.html" %}
+    
     <section id="section-home">
-      <div>
+      <canvas id="home-canvas">
+        rferfef
+      </canvas>
+      <div class="content">
         <h2>{{ t.home.build }}</h2>
         <h1><span id="typed"></span></h1>
-        <h2>com a Habemus: a plataforma online para desenvolver e hospedar seus websites.</h2>
+        <h2>{{ t.home.subtitle }}</h2>
+        <button type="" class="button outline">{{ t.home.startNow }}</button>
       </div>
-      <button type="" class="button">comece agora</button>
+      
     </section>
     <section id="section-code">
       <article>
-        <h2>Seu código, seu estilo, exatamente do jeito que você imaginar:</h2>
-        <h1 class="has-dot">Crie experiências perfeitas até o último pixel</h1>
-        <p>
-          O webeditor Habemus é um editor de código na nuvem cuidadosamente projetado para o desenvolvimento web moderno. É a ferramenta ideal para todo e qualquer projeto baseado em <span>html</span>, <span>css</span> e <span>javascript</span>: landing pages, interfaces web, games, visualizações de dados interativas, etc.
-        </p>
+        <h2>{{ t.sectionCode.h2 }}:</h2>
+        <h1 class="has-dot">{{ t.sectionCode.h1 }}</h1>
+        <p>{{ t.sectionCode.p }}</p>
       </article>
       <div id="webeditor-image">
-        <img src="resources/img/webeditor.jpg" alt="editor de código online da Habemus" title="Webeditor Habemus">
+        <img src="resources/img/webeditor-1.jpg" alt="editor de código online da Habemus" title="Webeditor Habemus">
       </div>
       <section class="details">
         <article>
           <img src="resources/img/features/feature01-code.svg" alt="alternative text" >
-          <h1>Ambiente de desenvolvimento pronto</h1>
-          <p>você não precisa deﬁnir um novo a ambiente a cada novo projeto</p>
+          <h1>{{ t.sectionCode.setupReady }}</h1>
+          <p>{{ t.sectionCode.setupReadyText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature02-code.svg" alt="alternative text" >
-          <h1>Use todo o potencial do CSS3</h1>
-          <p>nosso editor resolve a compatibilidade de prefixos de css entre browsers</p>
+          <h1>{{ t.sectionCode.potentialCss3 }}</h1>
+          <p>{{ t.sectionCode.potentialCss3Text }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature03-code.svg" alt="alternative text" >
-          <h1>Seu código seguro na nuvem</h1>
-          <p>acesse e desenvolva seu website de qualquer lugar do mundo</p>
+          <h1>{{ t.sectionCode.codeSafe }}</h1>
+          <p>{{ t.sectionCode.codeSafeText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature04-code.svg" alt="alternative text" >
-          <h1>Controle o histórico do seu projeto</h1>
-          <p>todas as versões publicadas ficam salvas e você pode recuperá-las a qualquer momento</p>
+          <h1>{{ t.sectionCode.controlHistory }}</h1>
+          <p>{{ t.sectionCode.controlHistoryText }}</p>
         </article>
       </section>
     </section>
     <section id="section-test">
       <div class="oblique-plan">
         <article>
-          <h1 class="has-dot">Teste em qualquer dispositivo</h1>
-          <p>Durante o desenvolvimento, seu website pode ser acessado de qualquer browser em qualquer dispositivo conectado à internet, através de uma <span>url de desenvolvimento.</span></p>
+          <h1 class="has-dot">{{ t.sectionTest.h1 }}</h1>
+          <p>{{ t.sectionTest.p }}</p>
         </article>
         <div id="devices-composition">
-          animacao devices
+          <!-- animacao devices -->
+          <img src="resources/img/test-devices.png" alt="alternative text" >
         </div>
       </div>
       <section class="details">
         <article>
           <img src="resources/img/features/feature01-test.svg" alt="alternative text" >
-          <h1>Preview em tempo real</h1>
-          <p>Edite o código e visualize seu projeto simultaneamente</p>
+          <h1>{{ t.sectionTest.previewRealTime }}</h1>
+          <p>{{ t.sectionTest.previewRealTimeText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature02-test.svg" alt="alternative text" >
-          <h1>Testes mais eficientes</h1>
-          <p>Teste seu projeto em ambiente idêntico ao de produção evitando aquele bug {{ sorrateiro / maluco }}</p>
+          <h1>{{ t.sectionTest.efficientTests }}</h1>
+          <p>{{ t.sectionTest.efficientTestsText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature03-test.svg" alt="alternative text" >
-          <h1>Url de preview compartilhável</h1>
-          <p>Acesse seu projeto de qualquer dispositivo durante o desenvolvimento</p>
+          <h1>{{ t.sectionTest.shareableUrl }}</h1>
+          <p>{{ t.sectionTest.shareableUrlText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature04-test.svg" alt="alternative text" >
-          <h1>Código e interface visualmente conectados</h1>
-          <p>Inspecione o preview e encontre o código correspondente</p>
+          <h1>{{ t.sectionTest.codeInterfaceConnected }}</h1>
+          <p>{{ t.sectionTest.codeInterfaceConnectedText }}</p>
         </article>
       </section>
     </section>
     <section id="section-publish">
       <article>
-        <h1 class="has-dot">Publique</h1>
-        <p>Hospede seu website nos <span>servidores de produção</span> da Habemus, diretamente do webeditor.</p>
+        <h1 class="has-dot">{{ t.sectionPublish.h1 }}</h1>
+        <p>{{ t.sectionPublish.p }}</p>
       </article>
       <div id="publish-image">
-        <img src="resources/img/webeditor.jpg" alt="editor de código online da Habemus" title="Webeditor Habemus">
+        <img src="resources/img/webeditor-2-publish.png" alt="editor de código online da Habemus" title="Webeditor Habemus">
       </div>
       <section class="details">
         <article>
           <img src="resources/img/features/feature01-publish.svg" alt="alternative text" >
-          <h1>Publicação sem sofrimento</h1>
-          <p>publique uma nova versão do seu projeto diretamente do webeditor</p>
+          <h1>{{ t.sectionPublish.hassleFree }}</h1>
+          <p>{{ t.sectionPublish.hassleFreeText}}</p>
         </article>
         <article>
           <img src="resources/img/features/feature02-publish.svg" alt="alternative text" >
-          <h1>Deploy inteligente e automatizado</h1>
-          <p>nosso sistema de CI <em>(continuous integration)</em> cuida de toda a minificação e otimização do seu website, sem alterar a qualidade</p>
+          <h1>{{ t.sectionPublish.autoDeploy }}</h1>
+          <p>{{ t.sectionPublish.autoDeployText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature03-publish.svg" alt="alternative text" >
-          <h1>Domínios personalizados</h1>
-          <p>Conecte quantos domínios próprios desejar ao seu website</p>
+          <h1>{{ t.sectionPublish.domain }}</h1>
+          <p>{{ t.sectionPublish.domainText }}</p>
         </article>
         <article>
           <img src="resources/img/features/feature04-publish.svg" alt="alternative text" >
-          <h1>Trabalhe tranquilo</h1>
-          <p>seu website estará seguro conosco</p>
+          <h1>{{ t.sectionPublish.workSafe }}</h1>
+          <p>{{ t.sectionPublish.workSafeText }}</p>
         </article>
       </section>
     </section>
     <section id="section-templates">
       <article>
-        <h1>Comece agora</h1>
-        <h2>usando um dos nossos templates base de projeto</h2>
-        <p>
-          Nós criamos alguns projetos com a estrutura básica de arquivos e alguns componentes já integrados. São ótimos projetos-base para começar seu trabalho:
-        </p>
+        <h1>{{ t.sectionTemplates.h1 }}</h1>
+        <h2>{{ t.sectionTemplates.h2 }}</h2>
+        <p>{{ t.sectionTemplates.p }}</p>
       </article>
       <div class="templates-gallery">
         <figure>
-          <img src="http://placehold.it/282x212" alt="alternative text" >
+          <img src="resources/img/starter-projects/screenshot-flexgrid.png" alt="screenshot of starter project flex grid" >
           <figcaption>
-            <h1>Template 1</h1>
+            <h1>{{ t.sectionTemplates.flexGrid }}</h1>
             <div class="buttons">
-              <button type="submit" class="button gray">ver</button>
-              <button type="submit" class="button">começar</button>
+              <a 
+                class="button"
+                href="http://starter-projects.habemus.website/2017/01/24/flex-grid.html">
+                {{ t.sectionTemplates.details }}
+              </a>
+              <a
+                class="button primary"
+                target="_blank"
+                data-action="deploy"
+      	        data-template-url="{{ site.url }}/resources/starter-projects/{{ post.ref }}/website.zip">
+                {{ t.sectionTemplates.start }}
+              </a>
             </div>
           </figcaption>
         </figure>
         <figure>
-          <img src="http://placehold.it/282x212" alt="alternative text" >
+          <img src="resources/img/starter-projects/screenshot-smooth-scroll.png" alt="screenshot of starter project smooth scroll" >
           <figcaption>
-            <h1>Template 2</h1>
+            <h1>{{ t.sectionTemplates.smoothScroll }}</h1>
             <div class="buttons">
-              <button type="submit" class="button gray">ver</button>
-              <button type="submit" class="button">começar</button>
+              <a 
+                class="button"
+                href="http://starter-projects.habemus.website/2017/01/24/smooth-scroll.html">
+                {{ t.sectionTemplates.details }}
+              </a>
+              <a
+                class="button primary"
+                target="_blank"
+                data-action="deploy"
+      	        data-template-url="{{ site.url }}/resources/starter-projects/{{ post.ref }}/website.zip">
+                {{ t.sectionTemplates.start }}
+              </a>
             </div>
           </figcaption>
         </figure>
         <figure>
-          <img src="http://placehold.it/282x212" alt="alternative text" >
+          <img src="resources/img/starter-projects/screenshot-smooth-scroll-animation.png" alt="screenshot of starter project smooth scroll with animation" >
           <figcaption>
-            <h1>Template 3</h1>
+            <h1>{{ t.sectionTemplates.smoothScrollAnimation }}</h1>
             <div class="buttons">
-              <button type="submit" class="button gray">ver</button>
+              <button type="submit" class="button gray">detalhes</button>
               <button type="submit" class="button">começar</button>
             </div>
           </figcaption>
         </figure>
+      </div>
+      <div class="other-buttons">
+        <a href="http://starter-projects.habemus.website/">{{ t.sectionTemplates.viewMore }}</a>
+        <br>
+        <br>
+        <a
+          class=""
+          target="_blank"
+          data-action="deploy"
+          data-template-url="{{ site.url }}/resources/starter-projects/{{ post.ref }}/website.zip">
+          {{ t.sectionTemplates.startBlank }}</a>
       </div>
     </section>
     <section id="section-web">
@@ -219,88 +209,18 @@
         </figure>
       </div>
       <article>
-        <h1>O poder da web</h1>
-        <p>Acreditamos no poder e na natureza aberta dos padrões web. <strong>html</strong>, <strong>css</strong> e <strong>js</strong> são tecnologias que permitem a {{ desenvolvedores / desenvolvedoras }} criar experiências digitais profundamente imersivas.</p>
+        <h1>{{ t.sectionWeb.powerOfWeb }}</h1>
+        <p>{{ t.sectionWeb.powerOfWebText }}</p>
       </article>
     </section>
-    <footer>
-      <section class="site-map">
-        <div class="container">
-          <div class="map">
-            <nav>
-              <ul>
-                <li>Habemus</li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="templates.html">Templates base</a></li>
-                <!-- <li><a href="plans.html">Planos</a></li> -->
-              </ul>
-            </nav>
-            <nav>
-              <ul>
-                <li>Empresa</li>
-                <li><a href="http://blog.habemus.website" target="_blank">Blog</a></li>
-                <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="contact.html">Contato</a></li>
-                <li><a href="about.html#work-with-us">Entre para o time</a></li>
-              </ul>
-            </nav>
-            <nav>
-              <ul>
-                <li>Suporte</li>
-                <li><a href="http://docs.habemus.website" target="_blank">FAQ</a></li>
-              </ul>
-            </nav>
-            <nav>
-              <ul>
-                <li>Siga-nos</li>
-                <li><a href="https://www.facebook.com/habemusplatform/" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/habemus_web" target="_blank">Twitter</a></li>
-                <li><a href="https://github.com/habemus" target="_blank">Github</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="language-buttons">
-            <a href="http://example.com" class="active">Pt </a>
-            <span> | </span>
-            <a href="http://example.com"> En</a>
-          </div>
-        </div>
-      </section>
-      <section class="site-info">
-        <div class="container">
-          <div class="words">
-            <span>© 2017 </span>
-            <a href="index.html">
-              <img src="resources/img/logo-light.svg" alt="alternative text">
-            </a>
-            <span id="word-change">empoderamento</span>
-          </div>
-          <div class="legal">
-            <a href="terms.html">Termos de uso</a>
-            <!--
-            <a href="http://example.com">Segurança</a>
-            <a href="http://example.com">Privacidade</a>
-            -->
-          </div>
-        </div>
-      </section>
-    </footer>
     
-    <script>
-      // TRANSLATIONS USED IN JS
-      {% if lang === 'en-US' %}
-      window.HABEMUS_TRANSLATIONS = {% include "resources/languages/en-US.json" %};
-      {% endif %}
-      
-      {% if lang === 'pt-BR' %}
-      window.HABEMUS_TRANSLATIONS = {% include "resources/languages/pt-BR.json" %};
-      {% endif %}
-    </script>
+    {% include "includes/footer.html" %}
     
-    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    {% include "includes/shared-scripts.html" %}
+    
     <script src="js/lib/typed.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/menu-header.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/random-words-footer.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/auth.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/random-words-home.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/habemus-buttons.js" type="text/javascript" charset="utf-8"></script>
+    
   </body>
 </html>

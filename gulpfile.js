@@ -21,7 +21,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./src/css')); //dest é para onde vão as coisas. a pasta
 });
 
-gulp.task('develop', function () {
+gulp.task('develop', ['less', 'translate'], function () {
   browserSync.init({
     server: {
       baseDir: "./tmp-translated/"

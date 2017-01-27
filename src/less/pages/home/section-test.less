@@ -27,6 +27,25 @@
 #devices-composition {
   display: block;
   width: 100%;
-  height: 600px; /* tirar isso depois que houver a composiçao */
-  padding-top: 70px;
+  max-width: 780px;
+  margin: 0 auto;
+  /* height: 600px; /* tirar isso depois que houver a composiçao */
+  padding: 70px 0;
+  
+  img {
+    width: 100%;
+  }
+}
+
+.other-buttons {
+  a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: @habemus-off-white;
+    
+    &:hover {
+      color: @habemus-green-light;
+    }
+  }
 }

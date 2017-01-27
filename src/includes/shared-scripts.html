@@ -1,0 +1,15 @@
+<script>
+  // TRANSLATIONS USED IN JS
+  {% if lang === 'en-US' %}
+  window.HABEMUS_TRANSLATIONS = {% include "resources/languages/en-US.json" %};
+  {% endif %}
+  
+  {% if lang === 'pt-BR' %}
+  window.HABEMUS_TRANSLATIONS = {% include "resources/languages/pt-BR.json" %};
+  {% endif %}
+</script>
+
+<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="js/menu-header.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/random-words-footer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/auth.js" type="text/javascript" charset="utf-8"></script>

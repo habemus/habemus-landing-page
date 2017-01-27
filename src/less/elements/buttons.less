@@ -1,30 +1,39 @@
 // buttons
-.button {
+.button,
+a.button {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   padding: 0 24px;
+  box-sizing: border-box;
   line-height: 50px;
-  background-color: @habemus-green-light;
+  background-color: @habemus-gray-light;
   color: @habemus-dark;
-  border: 1px solid @habemus-green-light;
+  border: none;
   text-align: center;
   margin: 0 auto;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   
   &:hover {
-    background-color: @habemus-green-dark;
-    border: 1px solid @habemus-green-dark;
+    background-color: @habemus-gray-light-2;
   }
   
-  &.gray {
-    background-color: @habemus-gray-light;
-    border: 1px solid @habemus-gray-light; 
+  &.primary {
+    background-color: @habemus-green-light;
     
     &:hover {
-      background-color: @habemus-gray-light-2;
-      border: 1px solid @habemus-gray-light-2;
+      background-color: @habemus-green-dark;
+    }
+  }
+  
+  &.outline {
+    background-color: transparent;
+    border: 1px solid @habemus-dark;
+    
+    &:hover {
+      background-color: @habemus-dark;
+      color: @habemus-off-white;
     }
   }
 }

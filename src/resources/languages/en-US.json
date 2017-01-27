@@ -1,13 +1,80 @@
 {
   "home": {
-    "build": "build"
+    "build": "build",
+    "subtitle": "with Habemus: the online platform for develop and host websites.",
+    "startNow": "start now"
+  },
+  "sectionCode": {
+    "h2": "Your code, your style, exactly the way you want",
+    "h1": "Craft experiences that are perfect to the last pixel. Really",
+    "p": "Habemus Webeditor is a cloud-based code editor carefully designed for the modern web development workflow. It is a perfect fit for anything that can be built with <span>html</span>, <span>css</span> and <span>javascript</span>: State-of-art inspiring landing pages, beautiful web UIs, games, interactive data visualizations, etc.",
+    "setupReady": "Ready to use development environment",
+    "setupReadyText": "you don't need to setup a new workspace for every new project",
+    "potentialCss3": "Take the best of CSS3",
+    "potentialCss3Text": "our webeditor takes care of browser css prefixes and compatibility",
+    "codeSafe": "Access your workspace from anywhere",
+    "codeSafeText": "your project is safety stored in the cloud",
+    "controlHistory": "Control history of your project",
+    "controlHistoryText": "all published versions are stored so you can restore them anytime."
+  },
+  "sectionTest": {
+    "h1": "Preview from any device",
+    "p": "From the very beginning of development, your website has a <span>shareable preview url</span> for you to access from any browser in any internet connected device",
+    "previewRealTime": "Code and preview visually connected",
+    "previewRealTimeText": "Edit code and preview results in real time",
+    "efficientTests": "Debug your code in real-world scenarios",
+    "efficientTestsText": "No more waiting until deploy to discover that {{ naughty / annoying }} bug",
+    "shareableUrl": "Shareable preview url",
+    "shareableUrlText": "Access your project from any browser in any internet connected device while developing",
+    "codeInterfaceConnected": "Code and preview visually connected",
+    "codeInterfaceConnectedText": "Inspect preview and find respective code" 
+  },
+  "sectionPublish": {
+    "h1": "Publish",
+    "p": "Easily host your website at Habemus' high-availability <span>production servers</span> directly from webeditor.",
+    "hassleFree": "Hassle-free publishing",
+    "hassleFreeText": "Publish a new version of your project directly from webeditor",
+    "autoDeploy": "Smart and automated deploy",
+    "autoDeployText": "our CI <em>(continuous integration)</em> deployment pipeline takes care of minifying and optimizing your website with lossless quality",
+    "domain": "Connect your own domain",
+    "domainText": "Connect as many personalized domains as you want to your website",
+    "workSafe": "Sleep well at night",
+    "workSafeText": "Your website is safe with us"
+  },
+  "sectionTemplates": {
+    "h1": "Start now",
+    "h2": "using one of our starter projects",
+    "p": "We’ve crafted some nice starter projects with the basic structure set up. They are great for starting your own website. Check them out!",
+    "flexGrid": "Flex Grid",
+    "smoothScroll": "Smooth Scroll",
+    "smoothScrollAnimation": "Smooth Scroll Animation",
+    "details": "details",
+    "start": "start",
+    "viewMore": "see all starter projects",
+    "startBlank": "or start a blank project"
+  },
+  "sectionWeb": {
+    "powerOfWeb": "The power of the web",
+    "powerOfWebText": "We believe in the power and in the openness of web standards. Modern <strong>HTML</strong>, <strong>CSS</strong> and <strongJavaScript</strong> are technologies that enable developers to create deeply immersive and beautiful digital experiences."
   },
   "nav": {
     "blog": "blog",
     "contact": "contact",
     "home": "home",
     "login": "login",
-    "templates": "templates"
+    "starterProjects": "starter projects"
+  },
+  "footer": {
+    "starterProjects": "Starter Projects",
+    "home": "Home",
+    "company": "Company",
+    "blog": "Blog",
+    "aboutUs": "About us",
+    "contact": "Contact",
+    "workWithUs": "Work with us",
+    "support": "Help",
+    "followUs": "Follow us",
+    "termsOfUse": "Terms of use"
   },
   "hAccountDialog": {
     "logIn": "log in",
@@ -17,28 +84,34 @@
     "password": "password",
     "confirmYourPassword": "confirm your password",
     "loginError": "login error",
-    "emailVerificationTitle": "Verifique seu e-mail",
-    "emailVerificationText": "Sua conta foi criada com sucesso.<br> Para garantir sua segurança, enviamos um e-mail com os próximos passos da verificação.",
+    "emailVerificationTitle": "Verify your e-mail",
+    "emailVerificationText": "Your account has been succesfully created.<br> Check your e-mail for instructions on how to confirm your account",
     "forgotPassword": "forgot my password",
     "forgotPasswordTitle": "Forgot my password",
     "forgotPasswordText": "We'll send you an e-mail to reset your password",
-    "PasswordResetSentTitle": "Password reset request created with success.",
+    "PasswordResetSentTitle": "Password reset request sent with success.",
     "PasswordResetSentText": "You will be receiving shortly an e-mail with further instructions.",
     "passwordResetError": "Something went wrong with password reset. Please go back and try again",
     "fullName": "full name",
     "username": "username",
     "email": "e-mail",
     "sendEmail": "send e-mail",
-    "howKnowHabemus": "How did you get to know habemus?",
-    "workshop": "During a workshop",
-    "facebook": "Facebook",
-    "search": "Search engine",
-    "indication": "Someone told me",
-    "other": "Others",
+    "howKnowHabemus": "how did you get to know habemus?",
+    "workshop": "during a workshop",
+    "facebook": "facebook",
+    "search": "search engine",
+    "indication": "someone recommended me",
+    "other": "others",
     "specifyOther": "Please specify",
     "readAndAgree": "I read and agree with",
     "useTerms": "terms of use",
     "signupError": "sign up error",
     "back": "back"
+  },
+  "contact": {
+    "contactTitle": "Contact",
+    "contactP1": "How can we help you?",
+    "contactP2": "Send suggestions, questions, bugs, comments",
+    "contactP3": "We are here to hear you!",
   }
 }

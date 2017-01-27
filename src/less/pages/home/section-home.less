@@ -7,11 +7,35 @@
   background-color: #cecece;
   
   text-align: center;
+  position: relative;
   
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  #home-canvas {
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+  
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+    max-width: 600px;
+    margin-bottom: 20px;
+    } 
+  }
 }
 
 /* 
