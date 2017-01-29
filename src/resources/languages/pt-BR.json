@@ -109,9 +109,15 @@
     "back": "voltar"
   },
   "contact": {
-    "contactTitle": "Contact",
-    "contactP1": "How can we help you?",
-    "contactP2": "Send suggestions, questions, bugs, comments",
-    "contactP3": "We are here to hear you!",
+    "contactTitle": "Contato",
+    "contactP1": "Em que podemos ajudar?",
+    "contactP2": "Mande sugestões, dúvidas, bugs, comentários.",
+    "contactP3": "Queremos muito te ouvir!",
+    "name": "nome",
+    "message": "menssagem",
+    "sendMessage": "enviar menssagem",
+    "location": "Localização",
+    "followUs": "Siga-nos",
+    "workWithUs": "Entre para o nosso time!"
   }
 }

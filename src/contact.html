@@ -9,20 +9,20 @@
     {% include "includes/header-light.html" %}
 
     <div class="contact-opening">
-      <h1>{{ t.contact.contactTitle }}Contato</h1>
+      <h1>{{ t.contact.contactTitle }}</h1>
     </div>
     <section class="contact-content">
       <section class="contact-form">
-        <p>{{ t.contact.contactP1 }}Em que podemos ajudar?</p>
-        <p>{{ t.contact.contactP2 }}Mande sugestões, dúvidas, bugs, comentários.</p>
-        <p>{{ t.contact.contactP3 }}Queremos muito te ouvir!</p>
+        <p>{{ t.contact.contactP1 }}</p>
+        <p>{{ t.contact.contactP2 }}</p>
+        <p>{{ t.contact.contactP3 }}</p>
         <form action="http://formspree.io/lucianaheuko@gmail.com" method="post">
           <input type="hidden" name="_subject" value="Novo contato!" />
           <input type="hidden" name="_cc" value="simonxd@gmail.com" />
           <div
             class="field-container"
             validate-on="change">
-            <label data-i18n="name">nome</label><br>
+            <label data-i18n="name">{{ t.contact.name }}</label><br>
             <input
               type="text"
               name="name"
@@ -42,7 +42,7 @@
           <div
             class="field-container"
             validate-on="change">
-            <label data-i18n="msg">mensagem</label><br>
+            <label data-i18n="msg">{{ t.contact.message }}</label><br>
             <textarea
               type="text"
               name="message"
@@ -50,7 +50,7 @@
             <div class="field-error-message"></div>
           </div>
           
-          <button type="submit" class="button primary" data-i18n="submitButton">enviar mensagem</button>
+          <button type="submit" class="button primary" data-i18n="submitButton">{{ t.contact.sendMessage }}</button>
           <div class="form-status"> </div>
         </form>
       </section>
@@ -60,13 +60,13 @@
           <dd>hello@habem.us</dd>
         </dl>
         <dl>
-          <dt>Localização</dt>
+          <dt>{{ t.contact.location }}</dt>
           <dd>Rua Bela Cintra, 419</dd>
           <dd>São Paulo - SP</dd>
           <dd>Brasil</dd>
         </dl>
         <dl>
-          <dt>Siga-nos</dt>
+          <dt>{{ t.contact.followUs }}</dt>
           <dd>
             <a href="https://www.facebook.com/habemusplatform" target="_blank">
               <img src="resources/img/icons/facebook.svg" alt="alternative text" >
@@ -87,7 +87,7 @@
           </dd>
         </dl>
         <dl>
-          <a href="http://example.com">Entre para o nosso time!</a>
+          <a href="http://example.com">{{ t.contact.workWithUs }}</a>
         </dl>
       </section>
     </section>

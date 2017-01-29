@@ -111,7 +111,13 @@
   "contact": {
     "contactTitle": "Contact",
     "contactP1": "How can we help you?",
-    "contactP2": "Send suggestions, questions, bugs, comments",
+    "contactP2": "Send suggestions, questions, bugs, comments.",
     "contactP3": "We are here to hear you!",
+    "name": "name",
+    "message": "message",
+    "sendMessage": "send message",
+    "location": "Location",
+    "followUs": "Follow us",
+    "workWithUs": "Work with us!"
   }
 }
