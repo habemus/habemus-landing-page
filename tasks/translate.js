@@ -54,7 +54,7 @@ module.exports = function (gulp) {
       
       var compileContext = {
         lang: lang.code,
-        t: lang.translations
+        t: lang.translations,
       };
       
       var stream = gulp.src(SRC_DIR + '/**/*')

@@ -17,6 +17,7 @@
     "gulp-less": "^3.3.0",
     "gulp-nunjucks": "^3.0.0",
     "gulp-prepare-translations": "^1.3.0",
+    "gulp-replace": "^0.5.4",
     "merge-stream": "^1.0.1"
   }
 }
