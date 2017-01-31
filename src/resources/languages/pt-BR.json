@@ -1,6 +1,17 @@
 {
   "home": {
     "build": "construa",
+    "buildProjects": [
+      "uma landing page incrível", 
+      "um website atraente", 
+      "uma animação parallax",
+      "um webapp angular", 
+      "uma visualização de dados interativa",
+      "um game",
+      "qualquer coisa que puder imaginar",
+      "tudo o que quiser",
+      "a web"
+    ],
     "subtitle": "com a Habemus: a plataforma online para desenvolver e hospedar seus websites.",
     "startNow": "comece agora"
   },
@@ -62,7 +73,9 @@
     "contact": "contato",
     "home": "home",
     "login": "entrar",
-    "starterProjects": "projetos base"
+    "logOut": "sair",
+    "starterProjects": "projetos base",
+    "goToDashboard": "go to dashboard"
   },
   "footer": {
     "starterProjects": "Projetos Base",

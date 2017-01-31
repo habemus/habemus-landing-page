@@ -10,13 +10,26 @@
     
     <section id="section-home">
       <canvas id="home-canvas">
-        rferfef
+        
       </canvas>
       <div class="content">
         <h2>{{ t.home.build }}</h2>
-        <h1><span id="typed"></span></h1>
+        <h1>
+          <span id="typed">
+          </span>
+          <span id="typed-strings" hidden>
+            {% for item in t.home.buildProjects %}
+              <p>{{ item }}</p>
+            {% endfor %}
+          </span>
+        </h1>
         <h2>{{ t.home.subtitle }}</h2>
-        <button type="" class="button outline">{{ t.home.startNow }}</button>
+        <a data-auth="logged-out" href="#login" class="button outline">
+          {{ t.home.startNow }}
+        </a>
+        <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
+          {{ t.home.startNow }}
+        </a>
       </div>
       
     </section>

@@ -1,7 +1,15 @@
 {
   "home": {
     "build": "build",
-    "subtitle": "with Habemus: the online platform for develop and host websites.",
+    "buildProjects": [
+      "an amazing website",
+      "a parallax animation",
+      "an angular.js webapp", 
+      "an interactive D3.js data viz",
+      "anything you can imagine",
+      "the web"
+    ],
+    "subtitle": "with Habemus: the online platform for developing and hosting websites.",
     "startNow": "start now"
   },
   "sectionCode": {
@@ -62,7 +70,9 @@
     "contact": "contact",
     "home": "home",
     "login": "login",
-    "starterProjects": "starter projects"
+    "logOut": "log out",
+    "starterProjects": "starter projects",
+    "goToDashboard": "go to dashboard"
   },
   "footer": {
     "starterProjects": "Starter Projects",
