@@ -58,7 +58,9 @@ module.exports = function (gulp) {
       };
       
       var stream = gulp.src(SRC_DIR + '/**/*')
-        .pipe(gulpIf(shouldTranslate, nunjucks.compile(compileContext)));
+        .pipe(gulpIf(shouldTranslate, nunjucks.compile(compileContext, {
+          autoescape: false
+        })));
         
       if (lang.isMain) {
         return stream.pipe(gulp.dest(DIST_DIR));
