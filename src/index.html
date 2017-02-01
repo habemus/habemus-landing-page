@@ -23,12 +23,15 @@
         </span>
       </h1>
       <h2>{{ t.home.subtitle }}</h2>
-      <a data-auth="logged-out" href="#login" class="button outline">
-        {{ t.home.startNow }}
-      </a>
-      <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
-        {{ t.home.startNow }}
-      </a>
+      <div id="start-now-buttons">
+        <a data-auth="logged-out" href="#login" class="button outline">
+          {{ t.home.startNow }}
+        </a>
+        <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
+          {{ t.home.startNow }}
+        </a>
+      </div>
+      
       
     </section>
     <section id="section-code">
@@ -38,7 +41,7 @@
         <p>{{ t.sectionCode.p }}</p>
       </article>
       <div id="webeditor-image">
-        <img class="lazyload" data-src="resources/img/webeditor-1.jpg" alt="editor de código online da Habemus" title="Webeditor Habemus">
+        <img class="lazyload" data-src="resources/img/webeditor-1-code.jpg" alt="editor de código online da Habemus" title="Webeditor Habemus">
       </div>
       <section class="details">
         <article>

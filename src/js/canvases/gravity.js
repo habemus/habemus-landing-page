@@ -84,6 +84,8 @@ $(function () {
       );
     });
     
+    var buttonPos = $('#start-now-buttons').first().offset()
+
     // wall variables
     var wallWidth = 50;
     
@@ -92,12 +94,17 @@ $(function () {
       squares,
       // obstacle
       Bodies.rectangle(
-        canvasWidth / 2,
-        canvasHeight / 2,
+        buttonPos.left + 80,
+        buttonPos.top + 25,
         160,
         50,
         {
           isStatic: true,
+          render: {
+            fillStyle: 'transparent',
+            strokeStyle: 'transparent',
+            lineWidth: 0,
+          }
         }
       ),
       // floor
