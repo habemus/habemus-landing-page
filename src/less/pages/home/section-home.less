@@ -38,6 +38,14 @@
     max-width: 600px;
     margin-bottom: 20px;
   }
+  
+  /**
+    Override default font, so that critical path loading is faster
+    Montserrat is the only font loading that blocks render
+   */
+  a.button {
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
 /* 
