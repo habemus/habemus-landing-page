@@ -20,8 +20,13 @@ $(function () {
       throw new Error('canvas is required');
     }
     
-    var canvasWidth = options.canvasWidth + 100;
-    var canvasHeight = options.canvasHeight;
+    // wall variables
+    var wallWidth = 50;
+    var floorPadding = 5;
+    var sideWallPadding = 3;
+    
+    var canvasWidth = options.canvasWidth;
+    var canvasHeight = options.canvasHeight + 5;
     var canvas = options.canvas;
     
     // direct access to classes
@@ -84,51 +89,63 @@ $(function () {
       );
     });
     
-    // wall variables
-    var wallWidth = 50;
-    var LRWallHeight = 2 / 3 * canvasHeight;
+    var buttonPos = $('#start-now-buttons').first().offset();
     
     // add bodies to the world
     World.add(world, [
       squares,
       // obstacle
       Bodies.rectangle(
-        canvasWidth / 2,
-        canvasHeight / 2,
+        buttonPos.left + 80,
+        buttonPos.top + 25,
         160,
         50,
         {
           isStatic: true,
+          render: {
+            fillStyle: 'transparent',
+            strokeStyle: 'transparent',
+            lineWidth: 0,
+          }
         }
       ),
       // floor
       Bodies.rectangle(
         canvasWidth / 2,
-        canvasHeight + (wallWidth / 2),
+        canvasHeight + (wallWidth / 2) - floorPadding,
         canvasWidth,
         wallWidth,
         {
-          isStatic: true
+          isStatic: true,
+          render: {
+            visible: false,
+          }
         }
       ),
       // right
       Bodies.rectangle(
-        canvasWidth + wallWidth/2,
-        canvasHeight - ((canvasHeight / 2 * LRWallHeight) / canvasHeight),
+        canvasWidth + wallWidth / 2 - sideWallPadding,
+        canvasHeight / 2,
         wallWidth,
-        LRWallHeight,
+        canvasHeight,
         {
-          isStatic: true
+          isStatic: true,
+          render: {
+            visible: false,
+          }
         }
       ),
       // left
       Bodies.rectangle(
-        - wallWidth/2,
-        canvasHeight - ((canvasHeight / 2 * LRWallHeight) / canvasHeight),
+        - wallWidth / 2 + sideWallPadding,
+        canvasHeight / 2,
         wallWidth,
-        LRWallHeight,
+        canvasHeight,
         {
-          isStatic: true
+          isStatic: true,
+          render: {
+            visible: false,
+          }
         }
       ),
     ]);
@@ -164,7 +181,7 @@ $(function () {
   
   var matterCtrl = prepareCanvas({
     canvas: document.querySelector('#home-canvas'),
-    canvasWidth: window.innerWidth,
+    canvasWidth: document.body.clientWidth,
     canvasHeight: window.innerHeight,
   });
 });
