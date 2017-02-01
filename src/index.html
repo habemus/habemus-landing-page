@@ -12,25 +12,23 @@
       <canvas id="home-canvas">
         
       </canvas>
-      <div class="content">
-        <h2>{{ t.home.build }}</h2>
-        <h1>
-          <span id="typed">
-          </span>
-          <span id="typed-strings" hidden>
-            {% for item in t.home.buildProjects %}
-              <p>{{ item }}</p>
-            {% endfor %}
-          </span>
-        </h1>
-        <h2>{{ t.home.subtitle }}</h2>
-        <a data-auth="logged-out" href="#login" class="button outline">
-          {{ t.home.startNow }}
-        </a>
-        <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
-          {{ t.home.startNow }}
-        </a>
-      </div>
+      <h2>{{ t.home.build }}</h2>
+      <h1>
+        <span id="typed">
+        </span>
+        <span id="typed-strings" hidden>
+          {% for item in t.home.buildProjects %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </span>
+      </h1>
+      <h2>{{ t.home.subtitle }}</h2>
+      <a data-auth="logged-out" href="#login" class="button outline">
+        {{ t.home.startNow }}
+      </a>
+      <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
+        {{ t.home.startNow }}
+      </a>
       
     </section>
     <section id="section-code">
@@ -244,6 +242,8 @@
     
     <script src="js/lib/typed.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/random-words-home.js" type="text/javascript" charset="utf-8"></script>
+    <script src="bower_components/Matter/build/matter.min.js"></script>
+    <script src="js/canvases/gravity.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/lib/habemus-buttons.js" type="text/javascript" charset="utf-8"></script>
     
   </body>

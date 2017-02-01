@@ -9,32 +9,33 @@
   text-align: center;
   position: relative;
   
-  #home-canvas {
-    width: 100%;
-    height: 100vh;
-    background-color: pink;
-  
-  }
-  
-  .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
+  #home-canvas {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: pink;
+  }
+  
+  > h1, > h2, > a {
+    /** position relative used to ensure text contents are above canvas **/
+    position: relative;
+    z-index: 2;
+  }
+  
     
-    h1 {
-      margin-bottom: 20px;
-    }
-    
-    h2 {
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
     max-width: 600px;
     margin-bottom: 20px;
-    } 
   }
 }
 
