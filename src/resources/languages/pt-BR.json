@@ -132,5 +132,25 @@
     "location": "Localização",
     "followUs": "Siga-nos",
     "workWithUs": "Entre para o nosso time!"
+  },
+  "aboutUs": {
+    "title": "Sobre nós",
+    "p1": "<strong>Somos apaixonados pela web </strong>",
+    "p2": "Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.",
+    "p3": "Somos uma equipe de pessoas sonhadoras movidas pela ideia de que é possível transformar a realidade empoderando mais gente a criar tecnologia.",
+    "readMore": "Leia mais",
+    "ourTeam": "Nosso time",
+    "lucianaTitle": "cofundadora, designer, programadora, educadora",
+    "lucianaText": "Designer de formação, aprendeu a programar para ter mais autonomia na execução de suas ideias. Acredita muito no potencial de impacto social positivo que a tecnologia possui. Também é cofundadora e professora de programação web na PrograMaria.",
+    "simonTitle": "cofundador, engenheiro de software, ﬁlósofo",
+    "simonText": "Começou a cursar economia, mas largou para dedicar-se integralmente ao desenvolvimento de software web. Foi CTO da Fábrica de Aplicativos, uma startup brasileira cujo principal produto é uma ferramenta de construção de aplicativos móveis sem a necessidade de programar.",
+    "joinTeam": "Entre para o nosso time",
+    "joinTeamText": "Estamos em busca de pessoas que também amem criar tecnologias web e que queiram agregar amor ao nosso time!",
+    "sendMsg": "Mande uma mensagem pra gente e bora bater um papo",
+    "name": "Seu nome",
+    "email": "Seu e-mail",
+    "linkedinFacebook": "Linkedin e/ou Facebook",
+    "aboutYou": "Conta pra gente um pouco sobre você! <br>Qual é a sua história? Como conheceu a habemus? <br>Por que te interessa trabalhar conosco?",
+    "sendMessage": "enviar mensagem"
   }
 }

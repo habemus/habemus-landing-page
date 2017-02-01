@@ -129,5 +129,25 @@
     "location": "Location",
     "followUs": "Follow us",
     "workWithUs": "Work with us!"
+  },
+  "aboutUs": {
+    "title": "About us",
+    "p1": "<strong>We are crazy about the web </strong>",
+    "p2": "Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.",
+    "p3": "Somos uma equipe de pessoas sonhadoras movidas pela ideia de que é possível transformar a realidade empoderando mais gente a criar tecnologia.",
+    "readMore": "Read more",
+    "ourTeam": "Our Team",
+    "lucianaTitle": "cofounder, designer, programmer, educator",
+    "lucianaText": "Graduated in design, she started learning programming in order to achieve more autonomy in building her ideas. She believes in  potential for positive social impact of technology. Cofounder and teacher of web programming at PrograMaria as well.",
+    "simonTitle": "cofounder, software engineer, philosopher",
+    "simonText": "Começou a cursar economia, mas largou para dedicar-se integralmente ao desenvolvimento de software web. Foi CTO da Fábrica de Aplicativos, uma startup brasileira cujo principal produto é uma ferramenta de construção de aplicativos móveis sem a necessidade de programar.",
+    "joinTeam": "Join our team",
+    "joinTeamText": "We're looking for people who also love building web technology so than we can add love to our team!",
+    "sendMsg": "Send us a message and let's have a coffee",
+    "name": "Your name",
+    "email": "Your e-mail",
+    "linkedinFacebook": "Linkedin and/or Facebook",
+    "aboutYou": "Tell us a little bit about you! <br>What's your story? How did you get to know habemus? <br>Why are you interested in working with us?",
+    "sendMessage": "send message"
   }
 }

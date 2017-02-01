@@ -8,29 +8,29 @@
     {% include "includes/header-light.html" %}
 
     <div class="about-opening">
-      <h1>Sobre nós</h1>
+      <h1>{{ t.aboutUs.title }}</h1>
     </div>
     <section class="about-content-container">
       <div class="about-content">
-        <p><strong>Somos apaixonados pela web <span><3</span></strong></p>
+        <p>{{ t.aboutUs.p1 }} <span><3</span></p>
         <br>
-        <p>Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.</p>
+        <p>{{ t.aboutUs.p2 }}Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.</p>
         <br>
-        <p>Somos uma equipe de pessoas sonhadoras movidas pela ideia de que é possível transformar a realidade empoderando mais gente a criar tecnologia. <a href="http://blog.habemus.website/2016/03/07/nao-esconder-o-codigo.html" target="_blank">Leia mais</a>
+        <p>{{ t.aboutUs.p3 }} <a href="http://blog.habemus.website/2016/03/07/nao-esconder-o-codigo.html" target="_blank">{{ t.aboutUs.readMore }}.</a>
         </p>
       </div>
     </section>
     <section class="about-team">
-      <h2>Nosso Time</h2>
+      <h2>{{ t.aboutUs.ourTeam }}</h2>
       <div class="team-members">
         <article>
           <a href="https://www.linkedin.com/in/luciana-heuko-a02b0870/" target="_blank">
             <img src="resources/img/team/luciana-heuko.svg" alt="alternative text" >
           </a>
           <h1>Luciana Heuko</h1>
-          <h2>cofundadora, designer, programadora, educadora</h2>
+          <h2>{{ t.aboutUs.lucianaTitle }}</h2>
           <p>
-            When I was graduating college, a mentor told me to ﬁnd a job that didn’t feel like a job. Venture Capital is that job for me. I wake up every day excited to work with amazing founders.
+            Designer de formação, aprendeu a programar para ter mais autonomia na execução de suas ideias. Acredita muito no potencial de transformação social da tecnologia. Cofundadora e professora de programação web na PrograMaria.
           </p>
         </article>
         <article>
@@ -38,22 +38,20 @@
             <img src="resources/img/team/simon-fan.svg" alt="alternative text" >
           </a>
           <h1>Simon Fan</h1>
-          <h2>cofundador, engenheiro de software, ﬁlósofo</h2>
-          <p>
-            When I was graduating college, a mentor told me to ﬁnd a job that didn’t feel like a job. Venture Capital is that job for me. I wake up every day excited to work with amazing founders.
-          </p>
+          <h2>{{ t.aboutUs.simonTitle }}</h2>
+          <p>{{ t.aboutUs.simonText }}</p>
         </article>
       </div>
     </section>
     <section class="about-form-container">
       <div class="about-form">
-        <h2>Entre para o nosso time!</h2>
+        <h2>{{ t.aboutUs.joinTeam }}!</h2>
         <p>
-          Estamos em busca de pessoas que também amem criar tecnologias web e que queiram agregar amor ao nosso time!
+          {{ t.aboutUs.joinTeamText }}
         </p>
         <br>
         <p>
-          Mande uma mensagem pra gente e bora bater um papo \o/
+          {{ t.aboutUs.sendMsg }} \o/
         </p>
         <form action="http://formspree.io/hello@habem.us" method="post">
           <input type="hidden" name="_subject" value="Novo membro para o time!" />
@@ -61,7 +59,7 @@
           <div
             class="field-container"
             validate-on="change">
-            <label data-i18n="name">nome</label><br>
+            <label data-i18n="name">{{ t.aboutUs.name }}</label><br>
             <input
               type="text"
               name="name"
@@ -71,7 +69,7 @@
           <div
             class="field-container"
             validate-on="change">
-            <label data-i18n="mail">e-mail</label><br>
+            <label data-i18n="mail">{{ t.aboutUs.email }}</label><br>
             <input
               type="text"
               name="email"
@@ -81,7 +79,7 @@
           <div
             class="field-container"
             validate-on="change">
-            <label data-i18n="social">linkedin e/ou facebook</label><br>
+            <label data-i18n="social">{{ t.aboutUs.linkedinFacebook }}</label><br>
             <input
               type="text"
               name="social"
@@ -92,9 +90,7 @@
             class="field-container"
             validate-on="change">
             <label data-i18n="msg">
-              Conta pra gente um pouco sobre você! <br>
-              Qual é a sua história? Como conheceu a habemus? <br>
-              Por que te interessa trabalhar conosco?
+              {{ t.aboutUs.aboutYou }}
             </label><br>
             <textarea
               type="text"
@@ -103,7 +99,7 @@
             <div class="field-error-message"></div>
           </div>
           
-          <button type="submit" class="button primary" data-i18n="submitButton">enviar mensagem</button>
+          <button type="submit" class="button primary" data-i18n="submitButton">{{ t.aboutUs.sendMessage }}</button>
           <div class="form-status"> </div>
         </form>
       </div>
