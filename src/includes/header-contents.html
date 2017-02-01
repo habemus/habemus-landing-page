@@ -7,7 +7,22 @@
     <nav>
       <ul>
         <li><a href="index.html" class="menu-item active">{{ t.nav.home }}</a></li>
-        <li><a href="templates.html" class="menu-item">{{ t.nav.starterProjects }}</a></li>
+        <li>
+          {% if lang === "pt-BR" %}
+          <a
+            href="/starter-projects/pt/"
+            class="menu-item">
+            {{ t.nav.starterProjects }}
+          </a>
+          {% endif %}
+          {% if lang === "en-US" %}
+          <a
+            href="/starter-projects/"
+            class="menu-item">
+            {{ t.nav.starterProjects }}
+          </a>
+          {% endif %}
+        </li>
         <li><a href="http://blog.habemus.website" class="menu-item">{{ t.nav.blog }}</a></li>
         <li><a href="contact.html" class="menu-item">{{ t.nav.contact }}</a></li>
         <li data-auth="logged-out">

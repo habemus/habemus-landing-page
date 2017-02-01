@@ -1,7 +1,14 @@
+// native
+const path = require('path');
+
 // third-party
-const gulpReplace = require('gulp-replace');
-const gulpCheerio = require('gulp-cheerio');
-const gulpIf      = require('gulp-if');
+const gulpReplace  = require('gulp-replace');
+const gulpCheerio  = require('gulp-cheerio');
+const gulpImagemin = require('gulp-imagemin');
+const gulpCleanCss = require('gulp-clean-css');
+const gulpIf       = require('gulp-if');
+const critical     = require('critical').stream;
+const fse          = require('fs-extra');
 
 // HABEMUS.IO google analytics script
 const GA_SCRIPT = `<script>
@@ -16,7 +23,19 @@ const GA_SCRIPT = `<script>
 </script>`;
 
 function isHtml(file) {
-  return /\.html/.test(file.path);
+  return /\.html$/.test(file.path);
+}
+
+function isJs(file) {
+  return /\.js$/.test(file.path);
+}
+
+function isImage(file) {
+  return (/\.(gif|jpe?g|png|svg)$/i).test(file.path);
+}
+
+function isCss(file) {
+  return /\.css$/.test(file.path);
 }
 
 module.exports = function (gulp) {
@@ -26,15 +45,31 @@ module.exports = function (gulp) {
       throw new Error('H_ACCOUNT_SERVER_URI env var MUST be defined');
     }
     
+    fse.removeSync(path.join(__dirname, '../dist'));
+
     return gulp.src('tmp-translated/**/*')
-      .pipe(gulpReplace(
+      .pipe(gulpIf(isJs, gulpReplace(
         'http://localhost:9000/api/h-account/public',
         process.env.H_ACCOUNT_SERVER_URI
-      ))
+      )))
       .pipe(gulpIf(isHtml, gulpCheerio(function ($, file, done) {
         $('body').append(GA_SCRIPT);
         done();
       })))
+      .pipe(gulpIf(isCss, gulpCleanCss()))
+      .pipe(gulpIf(isImage, gulpImagemin()))
+      .pipe(gulp.dest('dist'));
+  });
+
+  // Generate & Inline Critical-path CSS
+  gulp.task('critical', ['distribute'], function () {
+    return gulp.src('dist/*.html')
+      .pipe(critical({
+        base: 'dist/',
+        inline: true,
+        ignore: ['@font-face',/url\(/],
+      }))
+      // .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
       .pipe(gulp.dest('dist'));
   });
 };

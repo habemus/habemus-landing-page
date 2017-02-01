@@ -1,6 +1,7 @@
 // buttons
 .button,
 a.button {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -14,6 +15,10 @@ a.button {
   margin: 0 auto;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  &[hidden] {
+    display: none;
+  }
   
   &:hover {
     background-color: @habemus-gray-light-2;

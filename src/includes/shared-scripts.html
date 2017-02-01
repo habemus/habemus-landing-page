@@ -1,4 +1,6 @@
 <script>
+  // configurations and shared data
+
   // TRANSLATIONS USED IN JS
   {% if lang === 'en-US' %}
   window.HABEMUS_TRANSLATIONS = {% include "resources/languages/en-US.json" %};
@@ -7,9 +9,29 @@
   {% if lang === 'pt-BR' %}
   window.HABEMUS_TRANSLATIONS = {% include "resources/languages/pt-BR.json" %};
   {% endif %}
+
+  window.HABEMUS_DASHBOARD_URI = 'https://habemus.io/dashboard/';
 </script>
 
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="js/menu-header.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/random-words-footer.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/auth.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- google fonts -->
+<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600|Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+<!--
+https://github.com/typekit/webfontloader
+https://css-tricks.com/loading-web-fonts-with-the-web-font-loader/
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: [
+        'Open Sans:400,300,300italic,400italic,600italic,600',
+        'Montserrat:400,700'
+      ]
+    }
+  });
+</script>
