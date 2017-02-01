@@ -20,7 +20,7 @@ $(function () {
       throw new Error('canvas is required');
     }
     
-    var canvasWidth = options.canvasWidth;
+    var canvasWidth = options.canvasWidth + 100;
     var canvasHeight = options.canvasHeight;
     var canvas = options.canvas;
     
@@ -86,6 +86,7 @@ $(function () {
     
     // wall variables
     var wallWidth = 50;
+    var LRWallHeight = 2 / 3 * canvasHeight;
     
     // add bodies to the world
     World.add(world, [
@@ -113,9 +114,9 @@ $(function () {
       // right
       Bodies.rectangle(
         canvasWidth + wallWidth/2,
-        canvasHeight/2,
+        canvasHeight - ((canvasHeight / 2 * LRWallHeight) / canvasHeight),
         wallWidth,
-        canvasHeight,
+        LRWallHeight,
         {
           isStatic: true
         }
@@ -123,9 +124,9 @@ $(function () {
       // left
       Bodies.rectangle(
         - wallWidth/2,
-        canvasHeight/2,
+        canvasHeight - ((canvasHeight / 2 * LRWallHeight) / canvasHeight),
         wallWidth,
-        canvasHeight,
+        LRWallHeight,
         {
           isStatic: true
         }
@@ -148,11 +149,22 @@ $(function () {
     mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
     
     World.add(world, mouseConstraint);
+    
+    return {
+      engine: engine,
+      runner: runner,
+      render: render,
+      canvas: render.canvas,
+      stop: function() {
+        Matter.Render.stop(render);
+        Matter.Runner.stop(runner);
+      }
+    }
   }
   
-  prepareCanvas({
+  var matterCtrl = prepareCanvas({
     canvas: document.querySelector('#home-canvas'),
     canvasWidth: window.innerWidth,
     canvasHeight: window.innerHeight,
-  })
+  });
 });
