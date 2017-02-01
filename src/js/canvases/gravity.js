@@ -68,7 +68,7 @@ $(function () {
     Runner.run(runner, engine);
     
     // create squares
-    var squares = Composites.stack(0, -400, 30, 5, 0, 0, function (x, y) {
+    var squares = Composites.stack(0, -500, 32, 5, 0, 0, function (x, y) {
       var size = Common.random(5, 60);
       var angle = aux.degreesToRadians(Common.random(0, 45));
       
@@ -88,18 +88,20 @@ $(function () {
         }
       );
     });
-    
-    var buttonPos = $('#start-now-buttons').first().offset();
+
+    var buttonPos = $('#start-now-buttons').offset();
+    var buttonHeight = $('#start-now-buttons').height();
+    var buttonWidth = $('#start-now-buttons').width();
     
     // add bodies to the world
     World.add(world, [
       squares,
       // obstacle
       Bodies.rectangle(
-        buttonPos.left + 80,
-        buttonPos.top + 25,
-        160,
-        50,
+        buttonPos.left + (buttonWidth/2),
+        buttonPos.top + (buttonHeight/2),
+        buttonWidth,
+        buttonHeight,
         {
           isStatic: true,
           render: {
