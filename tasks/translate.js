@@ -4,6 +4,7 @@ const path = require('path');
 
 // third-party
 const nunjucks                = require('gulp-nunjucks');
+const gulpData                = require('gulp-data');
 const gulpIf                  = require('gulp-if');
 const mergeStream             = require('merge-stream');
 const gulpPrepareTranslations = require('gulp-prepare-translations');
@@ -52,13 +53,23 @@ module.exports = function (gulp) {
     
     var translationStreams = languages.map((lang) => {
       
-      var compileContext = {
+      var baseCompileContext = {
         lang: lang.code,
         t: lang.translations,
       };
       
       var stream = gulp.src(SRC_DIR + '/**/*')
-        .pipe(gulpIf(shouldTranslate, nunjucks.compile(compileContext, {
+        .pipe(gulpData(function(file) {
+          
+          var compileContext = Object.assign({}, baseCompileContext, {
+            file: {
+              path: path.relative(SRC_DIR, file.path),
+            }
+          });
+          
+          return compileContext;
+        }))
+        .pipe(gulpIf(shouldTranslate, nunjucks.compile(null, {
           autoescape: false
         })));
         

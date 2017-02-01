@@ -6,7 +6,9 @@ const gulpReplace  = require('gulp-replace');
 const gulpCheerio  = require('gulp-cheerio');
 const gulpImagemin = require('gulp-imagemin');
 const gulpCleanCss = require('gulp-clean-css');
+const gulpUglify   = require('gulp-uglify');
 const gulpIf       = require('gulp-if');
+const gulpUseref   = require('gulp-useref');
 const critical     = require('critical').stream;
 const fse          = require('fs-extra');
 
@@ -39,7 +41,7 @@ function isCss(file) {
 }
 
 module.exports = function (gulp) {
-  gulp.task('distribute', ['translate'], function () {
+  gulp.task('distribute', ['translate', 'less'], function () {
     
     if (!process.env.H_ACCOUNT_SERVER_URI) {
       throw new Error('H_ACCOUNT_SERVER_URI env var MUST be defined');
@@ -52,6 +54,7 @@ module.exports = function (gulp) {
         'http://localhost:9000/api/h-account/public',
         process.env.H_ACCOUNT_SERVER_URI
       )))
+      // .pipe(gulpIf(isJs, gulpUglify()))
       .pipe(gulpIf(isHtml, gulpCheerio(function ($, file, done) {
         $('body').append(GA_SCRIPT);
         done();
@@ -62,8 +65,11 @@ module.exports = function (gulp) {
   });
 
   // Generate & Inline Critical-path CSS
-  gulp.task('critical', ['distribute'], function () {
-    return gulp.src('dist/*.html')
+  gulp.task('distribute:critical', ['distribute'], function () {
+    
+    var pages = ['dist/*.html', 'dist/pt-BR/*.html'];
+    
+    return gulp.src(pages, { base: 'dist' })
       .pipe(critical({
         base: 'dist/',
         inline: true,

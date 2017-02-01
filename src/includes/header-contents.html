@@ -39,14 +39,14 @@
     </nav>
     <div class="language-buttons">
       {% if lang === "pt-BR" %}
-      <a href="/pt-BR" class="active">Pt </a>
+      <a href="/pt-BR/{{ file.path }}" class="active">Pt </a>
       <span> | </span>
-      <a href="/"> En</a>
+      <a href="/{{ file.path }}"> En</a>
       {% endif %}
       {% if lang === "en-US" %}
-      <a href="/pt-BR">Pt </a>
+      <a href="/pt-BR/{{ file.path }}">Pt </a>
       <span> | </span>
-      <a href="/" class="active"> En</a>
+      <a href="/{{ file.path }}" class="active"> En</a>
       {% endif %}
     </div>
   </div>

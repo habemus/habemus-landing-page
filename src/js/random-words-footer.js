@@ -1,52 +1,14 @@
 // animate word change on footer
 $(document).ready(function() {
   
-  var words = [
-    "web",
-    "empoderamento", 
-    "criatividade", 
-    "solução",
-    "poder",
-    "conquista",
-    "transformação",
-    "revolução",
-    "capacidade",
-    "ação",
-    "atitude",
-    "autonomia",
-    "código",
-    "luz",
-    "projeto",
-    "resposta",
-    "liberdade",
-    "igualdade",
-    "democracia",
-    "comunidade",
-    "pavê de chocolate",
-    "pudim",
-    "brigadeiro",
-    "tudo",
-    "café", 
-    "☘",
-    "🤓",
-    "👾",
-    "♫",
-    "😍",
-    "⛄",
-    "🤖",
-    "🚴",
-    "💪🏽",
-    "❤",
-    "🐶",
-    "🐵",
-    "🐽",
-    "🐭",
-    "🍌",
-    "🍄",
-    "🎃",
-    "🎈",
-    "💻",
-  ];
+  var $wordsContainer = $('#random-words-container');
+  
+  var words = $wordsContainer.find('> span').map(function (index, el) {
+    return $(el).text();
+  });
+  
+  $wordsContainer.remove();
+  
   $(".words").on("mouseenter", function() {
     console.log("passou");
     var item = words[Math.floor(Math.random()*words.length)];

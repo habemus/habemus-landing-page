@@ -49,6 +49,11 @@
           <img src="resources/img/logo-light.svg" alt="alternative text">
         </a>
         <span id="word-change">empoderamento</span>
+        <span id="random-words-container">
+          {% for item in t.randomWords %}
+          <span>{{ item }}</span>
+          {% endfor %}
+        </span>
       </div>
       <div class="legal">
         <a href="terms.html">{{ t.footer.termsOfUse }}</a>

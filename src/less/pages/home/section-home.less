@@ -21,13 +21,16 @@
     transform: translateX(-50%);
   }
   
+  > h1, > h2 {
+    pointer-events: none;
+  }
+  
   > h1, > h2, > #start-now-buttons {
     /** position relative used to ensure text contents are above canvas **/
     position: relative;
     z-index: 2;
     user-select: none;
   }
-  
     
   h1 {
     margin-bottom: 20px;
@@ -52,6 +55,7 @@
    */
   a.button {
     font-family: "Montserrat", sans-serif;
+    display: block;
   }
 }
 

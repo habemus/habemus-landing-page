@@ -33,15 +33,15 @@ $(function () {
      */
     hAccountDialog.getCurrentAccount().then(function (account) {
       // logged in
-      $onlyLoggedIn.show();
-      $onlyLoggedOut.hide();
+      $onlyLoggedIn.removeAttr('hidden');
+      $onlyLoggedOut.attr('hidden', 'true');
       
     })
     .catch(function (err) {
       // logged out
       
-      $onlyLoggedIn.hide();
-      $onlyLoggedOut.show();
+      $onlyLoggedIn.removeAttr('hidden');
+      $onlyLoggedOut.attr('hidden', 'true');
       
       // add event listeners
       $loginTriggers.on('click', function () {
@@ -68,8 +68,8 @@ $(function () {
     $logoutTriggers.on('click', function (e) {
       hAccountDialog.logOut();
       
-      $onlyLoggedIn.hide();
-      $onlyLoggedOut.show();
+      $onlyLoggedIn.attr('hidden', 'true');
+      $onlyLoggedOut.removeAttr('hidden');
     });
     
   };

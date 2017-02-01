@@ -36,7 +36,9 @@ $(function () {
     var Bodies = Matter.Bodies;
     var Runner = Matter.Runner;
     var Composites = Matter.Composites;
+    var Events = Matter.Events;
     var World = Matter.World;
+    var Vector = Matter.Vector;
     var Mouse = Matter.Mouse;
     var MouseConstraint = Matter.MouseConstraint;
     
@@ -68,7 +70,7 @@ $(function () {
     Runner.run(runner, engine);
     
     // create squares
-    var squares = Composites.stack(0, -500, 32, 5, 0, 0, function (x, y) {
+    var squaresStackComposite = Composites.stack(0, -500, 32, 5, 0, 0, function (x, y) {
       var size = Common.random(5, 60);
       var angle = aux.degreesToRadians(Common.random(0, 45));
       
@@ -88,6 +90,8 @@ $(function () {
         }
       );
     });
+    // make a clone of the squares bodies
+    var squares = squaresStackComposite.bodies.concat([]);
 
     var buttonPos = $('#start-now-buttons').offset();
     var buttonHeight = $('#start-now-buttons').height();
@@ -95,7 +99,7 @@ $(function () {
     
     // add bodies to the world
     World.add(world, [
-      squares,
+      squaresStackComposite,
       // obstacle
       Bodies.rectangle(
         buttonPos.left + (buttonWidth/2),
@@ -108,6 +112,19 @@ $(function () {
             fillStyle: 'transparent',
             strokeStyle: 'transparent',
             lineWidth: 0,
+          }
+        }
+      ),
+      // roof
+      Bodies.rectangle(
+        canvasWidth / 2,
+        -1.5 * canvasHeight,
+        canvasWidth,
+        wallWidth,
+        {
+          isStatic: true,
+          render: {
+            visible: false,
           }
         }
       ),
@@ -129,7 +146,7 @@ $(function () {
         canvasWidth + wallWidth / 2 - sideWallPadding,
         canvasHeight / 2,
         wallWidth,
-        canvasHeight,
+        canvasHeight * 100,
         {
           isStatic: true,
           render: {
@@ -142,7 +159,7 @@ $(function () {
         - wallWidth / 2 + sideWallPadding,
         canvasHeight / 2,
         wallWidth,
-        canvasHeight,
+        canvasHeight * 100,
         {
           isStatic: true,
           render: {
@@ -169,6 +186,71 @@ $(function () {
     
     World.add(world, mouseConstraint);
     
+    // mouse events
+    var isDragging = false;
+    var wasDragging = false;
+    Events.on(mouseConstraint, 'startdrag', function (e) {
+      isDragging = true;
+    });
+    Events.on(mouseConstraint, 'enddrag', function (e) {
+      isDragging = false;
+      wasDragging = true;
+      
+      setTimeout(function () {
+        wasDragging = false;
+      }, 500);
+    });
+    Events.on(mouseConstraint, 'mousemove', function (e) {
+      
+      if (isDragging) {
+        return;
+      }
+      
+      // console.log('mousemove', e.mouse.absolute);
+      var mousePosition = e.mouse.absolute;
+      var target = Matter.Query.point(squares, mousePosition)[0];
+      
+      if (!target) {
+        return;
+      }
+      
+      var magnitude = 0.05 * target.mass;
+      var direction = Matter.Vector.create(0, -1); // always up
+      var force = Matter.Vector.mult(direction, magnitude);
+      Matter.Body.applyForce(target, target.position, force);
+    });
+    
+    Events.on(mouseConstraint, 'mouseup', function (e) {
+      
+      if (wasDragging) {
+        return;
+      }
+      
+      // console.log('mouseup', e);
+      var size = Common.random(5, 60);
+      var angle = aux.degreesToRadians(Common.random(0, 45));
+      
+      var newSquare = Bodies.rectangle(
+        e.mouse.mouseupPosition.x,
+        e.mouse.mouseupPosition.y,
+        size,
+        size,
+        {
+          angle: angle,
+          restitution: 0.1,
+          render: {
+            fillStyle: '#3eeeb7',
+            strokeStyle: '#0adda6',
+            lineWidth: 2,
+          }
+        }
+      );
+      
+      // save to the list of squares
+      squares.push(newSquare);
+      World.add(world, newSquare);
+    });
+    
     return {
       engine: engine,
       runner: runner,
@@ -181,9 +263,11 @@ $(function () {
     }
   }
   
-  var matterCtrl = prepareCanvas({
-    canvas: document.querySelector('#home-canvas'),
-    canvasWidth: document.body.clientWidth,
-    canvasHeight: window.innerHeight,
-  });
+  setTimeout(function () {
+    var matterCtrl = prepareCanvas({
+      canvas: document.querySelector('#home-canvas'),
+      canvasWidth: document.body.clientWidth,
+      canvasHeight: window.innerHeight,
+    });
+  }, 300);
 });
