@@ -1,0 +1,1 @@
+export H_ACCOUNT_SERVER_URI="https://api.habemus.io/account/v2"

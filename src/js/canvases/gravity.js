@@ -8,7 +8,7 @@ $(function () {
   
   // constants
   const IS_MOBILE = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
+  const IS_APPLE  = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   
   function prepareCanvas(options) {
     
@@ -74,7 +74,7 @@ $(function () {
     Runner.run(runner, engine);
     
     // create squares
-    var squaresStackCompositeTop = IS_MOBILE ? 20 : -500;
+    var squaresStackCompositeTop = IS_MOBILE ? 50 : -500;
     var squaresStackComposite = Composites.stack(0, squaresStackCompositeTop, 32, 5, 0, 0, function (x, y) {
       var size = Common.random(5, 60);
       var angle = aux.degreesToRadians(Common.random(0, 45));
@@ -200,13 +200,13 @@ $(function () {
         ]);
         
       	window.addEventListener('devicemotion', function(e) {
-      		ax = event.accelerationIncludingGravity.x * 0.6;
-      		ay = -1 * event.accelerationIncludingGravity.y  * 0.6;
+      		var ax = event.accelerationIncludingGravity.x * 0.6;
+      		var ay = event.accelerationIncludingGravity.y  * 0.6;
       		
   		    // define world-wide configs
           world.gravity = {
             x: ax,
-            y: ay,
+            y: IS_APPLE ? ay : ay * -1,
           };		
       	});
       } 
@@ -295,7 +295,6 @@ $(function () {
       });
     }
     
-    
     return {
       engine: engine,
       runner: runner,
@@ -307,15 +306,15 @@ $(function () {
       }
     }
   }
-  
-  setTimeout(function () {
-    var matterCtrl = prepareCanvas({
-      canvas: document.querySelector('#home-canvas'),
-      canvasWidth: document.body.clientWidth,
-      canvasHeight: window.innerHeight,
-    });
-  }, 300);
-  
+
+  var $home = $('#section-home');
+
+  var matterCtrl = prepareCanvas({
+    canvas: document.querySelector('#home-canvas'),
+    canvasWidth: document.body.clientWidth,
+    canvasHeight: $home.height(),
+  });
+
   setTimeout(function () {
     
     $('#thanks').addClass('active');
