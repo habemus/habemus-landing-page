@@ -40,8 +40,8 @@ $(function () {
     .catch(function (err) {
       // logged out
       
-      $onlyLoggedIn.removeAttr('hidden');
-      $onlyLoggedOut.attr('hidden', 'true');
+      $onlyLoggedIn.attr('hidden', 'true');
+      $onlyLoggedOut.removeAttr('hidden');
       
       // add event listeners
       $loginTriggers.on('click', function () {

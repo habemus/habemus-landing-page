@@ -270,4 +270,10 @@ $(function () {
       canvasHeight: window.innerHeight,
     });
   }, 300);
+  
+  setTimeout(function () {
+    
+    $('#thanks').addClass('active');
+    
+  }, 6000);
 });
