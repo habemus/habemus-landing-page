@@ -1,10 +1,14 @@
 $(function () {
   
+  // auxiliary functions
   var aux = {};
-  
   aux.degreesToRadians = function (degrees) {
     return degrees * Math.PI / 180; 
   };
+  
+  // constants
+  const IS_MOBILE = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
   
   function prepareCanvas(options) {
     
@@ -70,7 +74,8 @@ $(function () {
     Runner.run(runner, engine);
     
     // create squares
-    var squaresStackComposite = Composites.stack(0, -500, 32, 5, 0, 0, function (x, y) {
+    var squaresStackCompositeTop = IS_MOBILE ? 20 : -500;
+    var squaresStackComposite = Composites.stack(0, squaresStackCompositeTop, 32, 5, 0, 0, function (x, y) {
       var size = Common.random(5, 60);
       var angle = aux.degreesToRadians(Common.random(0, 45));
       
@@ -92,29 +97,10 @@ $(function () {
     });
     // make a clone of the squares bodies
     var squares = squaresStackComposite.bodies.concat([]);
-
-    var buttonPos = $('#start-now-buttons').offset();
-    var buttonHeight = $('#start-now-buttons').height();
-    var buttonWidth = $('#start-now-buttons').width();
     
     // add bodies to the world
     World.add(world, [
       squaresStackComposite,
-      // obstacle
-      Bodies.rectangle(
-        buttonPos.left + (buttonWidth/2),
-        buttonPos.top + (buttonHeight/2),
-        buttonWidth,
-        buttonHeight,
-        {
-          isStatic: true,
-          render: {
-            fillStyle: 'transparent',
-            strokeStyle: 'transparent',
-            lineWidth: 0,
-          }
-        }
-      ),
       // roof
       Bodies.rectangle(
         canvasWidth / 2,
@@ -169,87 +155,146 @@ $(function () {
       ),
     ]);
     
-    // add mouse control
-    var mouse = Mouse.create(render.canvas);
-    var mouseConstraint = MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 1,
-        render: {
-          visible: false,
-        }
-      }
-    });
-    // https://github.com/liabru/matter-js/issues/84
-    mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
-    mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
-    
-    World.add(world, mouseConstraint);
-    
-    // mouse events
-    var isDragging = false;
-    var wasDragging = false;
-    Events.on(mouseConstraint, 'startdrag', function (e) {
-      isDragging = true;
-    });
-    Events.on(mouseConstraint, 'enddrag', function (e) {
-      isDragging = false;
-      wasDragging = true;
+    if (!IS_MOBILE) {
+      // add obstacle for the button
+      var startNowButtonPos = $('#start-now-buttons').offset();
+      var startNowButtonH = $('#start-now-buttons').height();
+      var startNowButtonW = $('#start-now-buttons').width();
       
-      setTimeout(function () {
-        wasDragging = false;
-      }, 500);
-    });
-    Events.on(mouseConstraint, 'mousemove', function (e) {
-      
-      if (isDragging) {
-        return;
-      }
-      
-      // console.log('mousemove', e.mouse.absolute);
-      var mousePosition = e.mouse.absolute;
-      var target = Matter.Query.point(squares, mousePosition)[0];
-      
-      if (!target) {
-        return;
-      }
-      
-      var magnitude = 0.05 * target.mass;
-      var direction = Matter.Vector.create(0, -1); // always up
-      var force = Matter.Vector.mult(direction, magnitude);
-      Matter.Body.applyForce(target, target.position, force);
-    });
-    
-    Events.on(mouseConstraint, 'mouseup', function (e) {
-      
-      if (wasDragging) {
-        return;
-      }
-      
-      // console.log('mouseup', e);
-      var size = Common.random(5, 60);
-      var angle = aux.degreesToRadians(Common.random(0, 45));
-      
-      var newSquare = Bodies.rectangle(
-        e.mouse.mouseupPosition.x,
-        e.mouse.mouseupPosition.y,
-        size,
-        size,
+      // obstacle
+      World.add(world, Bodies.rectangle(
+        startNowButtonPos.left + (startNowButtonW/2),
+        startNowButtonPos.top + (startNowButtonH/2),
+        startNowButtonW,
+        startNowButtonH,
         {
-          angle: angle,
-          restitution: 0.1,
+          isStatic: true,
           render: {
-            fillStyle: '#3eeeb7',
-            strokeStyle: '#0adda6',
-            lineWidth: 2,
+            fillStyle: 'transparent',
+            strokeStyle: 'transparent',
+            lineWidth: 0,
           }
         }
-      );
+      ));
+    }
+    
+    
+    if (IS_MOBILE) {
+      // no mouse control in mobile
       
-      // save to the list of squares
-      squares.push(newSquare);
-      World.add(world, newSquare);
-    });
+      if (window.DeviceMotionEvent !== undefined) {
+        // mobile roof
+        World.add(world, [
+          Bodies.rectangle(
+            canvasWidth / 2,
+            (- 1 * (wallWidth / 2)) - floorPadding,
+            canvasWidth,
+            wallWidth,
+            {
+              isStatic: true,
+              render: {
+                visible: false,
+              }
+            }
+          ),
+        ]);
+        
+      	window.addEventListener('devicemotion', function(e) {
+      		ax = event.accelerationIncludingGravity.x * 0.6;
+      		ay = -1 * event.accelerationIncludingGravity.y  * 0.6;
+      		
+  		    // define world-wide configs
+          world.gravity = {
+            x: ax,
+            y: ay,
+          };		
+      	});
+      } 
+      
+    } else {
+      // add mouse control
+      var mouse = Mouse.create(render.canvas);
+      var mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+          stiffness: 1,
+          render: {
+            visible: false,
+          }
+        }
+      });
+      // https://github.com/liabru/matter-js/issues/84
+      mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
+      mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+      
+      World.add(world, mouseConstraint);
+      
+      // mouse events
+      var isDragging = false;
+      var wasDragging = false;
+      Events.on(mouseConstraint, 'startdrag', function (e) {
+        isDragging = true;
+      });
+      Events.on(mouseConstraint, 'enddrag', function (e) {
+        isDragging = false;
+        wasDragging = true;
+        
+        setTimeout(function () {
+          wasDragging = false;
+        }, 500);
+      });
+      Events.on(mouseConstraint, 'mousemove', function (e) {
+        
+        if (isDragging) {
+          return;
+        }
+        
+        // console.log('mousemove', e.mouse.absolute);
+        var mousePosition = e.mouse.absolute;
+        var target = Matter.Query.point(squares, mousePosition)[0];
+        
+        if (!target) {
+          return;
+        }
+        
+        var magnitude = 0.05 * target.mass;
+        var direction = Matter.Vector.create(0, -1); // always up
+        var force = Matter.Vector.mult(direction, magnitude);
+        Matter.Body.applyForce(target, target.position, force);
+      });
+      
+      Events.on(mouseConstraint, 'mouseup', function (e) {
+        
+        if (wasDragging) {
+          return;
+        }
+        
+        // console.log('mouseup', e);
+        var size = Common.random(5, 60);
+        var angle = aux.degreesToRadians(Common.random(0, 45));
+        
+        var newSquare = Bodies.rectangle(
+          e.mouse.mouseupPosition.x,
+          e.mouse.mouseupPosition.y,
+          size,
+          size,
+          {
+            angle: angle,
+            restitution: 0.1,
+            render: {
+              fillStyle: '#3eeeb7',
+              strokeStyle: '#0adda6',
+              lineWidth: 2,
+            }
+          }
+        );
+        
+        // save to the list of squares
+        squares.push(newSquare);
+        World.add(world, newSquare);
+      });
+    }
+    
     
     return {
       engine: engine,
