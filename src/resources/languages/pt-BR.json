@@ -1,6 +1,7 @@
 {
   "home": {
     "build": "construa",
+    "interactionBuiltWith": "interação construída com ",
     "buildProjects": [
       "uma landing page incrível", 
       "um website atraente", 
@@ -156,13 +157,11 @@
   "randomWords": [
     "web",
     "empoderamento", 
-    "criatividade", 
-    "solução",
-    "poder",
-    "conquista",
+    "criatividade",
+    "realização",
     "transformação",
     "revolução",
-    "capacidade",
+    "habilidade",
     "ação",
     "atitude",
     "autonomia",
@@ -174,7 +173,7 @@
     "igualdade",
     "democracia",
     "comunidade",
-    "pavê de chocolate",
+    "bolo de chocolate",
     "pudim",
     "brigadeiro",
     "tudo",

@@ -1,6 +1,7 @@
 {
   "home": {
     "build": "build",
+    "interactionBuiltWith": "interaction built with ",
     "buildProjects": [
       "an amazing website",
       "a parallax animation",
@@ -133,14 +134,14 @@
   "aboutUs": {
     "title": "About us",
     "p1": "<strong>We are crazy about the web </strong>",
-    "p2": "Fundada na cidade de São Paulo no ﬁnal de 2015, a Habemus é uma empresa de tecnologia que cria ferramentas e provê serviços para estimular o desenvolvimento e o compartilhamento de tecnologia web pelo mundo.",
-    "p3": "Somos uma equipe de pessoas sonhadoras movidas pela ideia de que é possível transformar a realidade empoderando mais gente a criar tecnologia.",
+    "p2": "Founded in São Paulo in the end of 2015, habemus is a startup that creates tools and provides users with services that encourage development besides sharing web technology around the world.",
+    "p3": "Our team is composed by idealistic people who believe changing reality is completely possible when empowering more people to create technology.",
     "readMore": "Read more",
     "ourTeam": "Our Team",
     "lucianaTitle": "cofounder, designer, programmer, educator",
     "lucianaText": "Graduated in design, she started learning programming in order to achieve more autonomy in building her ideas. She believes in  potential for positive social impact of technology. Cofounder and teacher of web programming at PrograMaria as well.",
     "simonTitle": "cofounder, software engineer, philosopher",
-    "simonText": "Começou a cursar economia, mas largou para dedicar-se integralmente ao desenvolvimento de software web. Foi CTO da Fábrica de Aplicativos, uma startup brasileira cujo principal produto é uma ferramenta de construção de aplicativos móveis sem a necessidade de programar.",
+    "simonText": "Started learning Economy, but quit school to dive deeply into software web development. Worked as CTO of Fábrica de Aplicativos, a brazilian startup whose main product is a platform for building mobile apps without having to code.",
     "joinTeam": "Join our team",
     "joinTeamText": "We're looking for people who also love building web technology so than we can add love to our team!",
     "sendMsg": "Send us a message and let's have a coffee",

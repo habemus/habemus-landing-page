@@ -10,7 +10,7 @@ $(document).ready(function() {
   $wordsContainer.remove();
   
   $(".words").on("mouseenter", function() {
-    console.log("passou");
+    // console.log("passou");
     var item = words[Math.floor(Math.random()*words.length)];
     $("#word-change").text(item);
   });
