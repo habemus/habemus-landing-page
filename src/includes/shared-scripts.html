@@ -3,10 +3,12 @@
 
   // TRANSLATIONS USED IN JS
   {% if lang === 'en-US' %}
+  window.HABEMUS_LANGUAGE = 'en-US';
   window.HABEMUS_TRANSLATIONS = {% include "resources/languages/en-US.json" %};
   {% endif %}
   
   {% if lang === 'pt-BR' %}
+  window.HABEMUS_LANGUAGE = 'pt-BR';
   window.HABEMUS_TRANSLATIONS = {% include "resources/languages/pt-BR.json" %};
   {% endif %}
 

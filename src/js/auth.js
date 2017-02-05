@@ -21,10 +21,14 @@ $(function () {
     hAccountDialog = new window.HAccountDialog({
       // serverURI: 'https://api.habemus.io/account/v2',
       serverURI: 'http://localhost:9000/api/h-account/public',
-      t: function (key) {
+      t: function (language, key) {
+        // ignore language, as it will be set by default on the webpage.
+        // TODO: allow user to change language
+
         // Translations MUST be available as window object
         return window.HABEMUS_TRANSLATIONS.hAccountDialog[key];
       },
+      language: window.HABEMUS_LANGUAGE,
     });
     hAccountDialog.attach(document.body);
     
@@ -42,22 +46,28 @@ $(function () {
       
       $onlyLoggedIn.attr('hidden', 'true');
       $onlyLoggedOut.removeAttr('hidden');
+
+      function logInToDashboard() {
+        hAccountDialog.ensureAccount({
+          ensureEmailVerified: true
+        })
+        .then(function (account) {
+          var dashboardURL = '//' + window.location.host + '/dashboard';
+          window.location.assign(dashboardURL);
+        })
+        .catch(function (err) {
+          console.warn(err);
+          window.location.hash = '#';
+        });
+      }
       
       // add event listeners
-      $loginTriggers.on('click', function () {
-        hAccountDialog.ensureAccount({ ensureEmailVerified: true })
-          .then(function (account) {
-            var dashboardURL = '//' + window.location.host + '/dashboard';
-            window.location.assign(dashboardURL);
-          });
-      });
+      $loginTriggers.on('click', logInToDashboard);
       
       // check for location-based triggers
       var hash = window.location.hash;
       if (hash === '#login') {
-        hAccountDialog.ensureAccount({ ensureEmailVerified: true });
-      } else if (hash === '#signup') {
-        hAccountDialog.signUp();
+        logInToDashboard();
       }
     });
     
