@@ -53,7 +53,7 @@
       <div class="words">
         <span>© 2017 </span>
         <a href="index.html">
-          <img src="resources/img/logo-light.svg" alt="alternative text">
+          <img src="{{ siteURL }}/resources/img/logo-light.svg" alt="alternative text">
         </a>
         <span id="word-change">web</span>
         <span id="random-words-container">
@@ -63,10 +63,30 @@
         </span>
       </div>
       <div class="legal">
-        <a href="terms.html">{{ t.footer.termsOfUse }}</a>
+        {% if lang === "pt-BR" %}
+        <a href="/pt-BR/legal/terms-of-service.html">
+          {{ t.footer.termsOfService }}
+        </a>
+        {% endif %}
+        {% if lang === "en-US" %}
+        <a href="/legal/terms-of-service.html">
+          {{ t.footer.termsOfService }}
+        </a>
+        {% endif %}
+
+        {% if lang === "pt-BR" %}
+        <a href="/pt-BR/legal/privacy-policy.html">
+          {{ t.footer.privacyPolicy }}
+        </a>
+        {% endif %}
+        {% if lang === "en-US" %}
+        <a href="/legal/privacy-policy.html">
+          {{ t.footer.privacyPolicy }}
+        </a>
+        {% endif %}
+
         <!--
         <a href="http://example.com">Segurança</a>
-        <a href="http://example.com">Privacidade</a>
         -->
       </div>
     </div>

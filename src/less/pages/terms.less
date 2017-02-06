@@ -8,3 +8,46 @@
 @import '../elements/loading.less';
 @import '../elements/buttons.less';
 @import '../elements/form.less';
+
+section.legal {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+  font-family: 'Open Sans', sans-serif;
+
+  box-sizing: border-box;
+
+  > * {
+    margin-bottom: 20px;
+  }
+
+  // 'un'-reset list styles
+  li ul, li ol {
+    margin:0 1.5em;
+  }
+  ul, ol {
+    margin:0 1.5em 1.5em 1.5em;
+  }
+  ul {
+    list-style-type:disc;
+  }
+
+  // headings
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  section.legal {
+    padding-right: 400px;
+  }
+}
