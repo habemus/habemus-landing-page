@@ -19,12 +19,12 @@
     "p": "Habemus Webeditor is a cloud-based code editor carefully designed for the modern web development workflow. It is a perfect fit for anything that can be built with <span>html</span>, <span>css</span> and <span>javascript</span>: inspiring landing pages, web UIs, games, interactive data visualizations, etc.",
     "setupReady": "Ready to use development environment",
     "setupReadyText": "you don't need to setup a new workspace for every new project",
-    "potentialCss3": "Get the best out of CSS3",
+    "potentialCss3": "Use the best of CSS3",
     "potentialCss3Text": "our webeditor takes care of browser css prefixes and compatibility",
     "codeSafe": "Access your workspace from anywhere",
     "codeSafeText": "your project is safely stored in the cloud",
     "controlHistory": "Control the history of your project",
-    "controlHistoryText": "all published versions are stored so you can restore them at anytime."
+    "controlHistoryText": "all published versions are kept so that you can restore them at anytime."
   },
   "sectionTest": {
     "h1": "Preview from any device",
@@ -34,9 +34,9 @@
     "efficientTests": "Debug your code in real-world scenarios",
     "efficientTestsText": "No more waiting until deploy to discover that {{ naughty / annoying }} bug",
     "shareableUrl": "Shareable preview url",
-    "shareableUrlText": "Access your website from any browser while developing",
+    "shareableUrlText": "Collaborate with other people by letting them access your website from any browser while it is in development",
     "codeInterfaceConnected": "Code and preview visually connected",
-    "codeInterfaceConnectedText": "Inspect the preview to find source code" 
+    "codeInterfaceConnectedText": "Inspect the preview to find the corresponding source code" 
   },
   "sectionPublish": {
     "h1": "Publish",
@@ -46,7 +46,7 @@
     "autoDeploy": "Smart and automated deploy",
     "autoDeployText": "our CI <em>(continuous integration)</em> deployment pipeline takes care of minifying and optimizing your website with lossless quality",
     "domain": "Connect your own domain",
-    "domainText": "Connect as many personalized domains as you want to your website",
+    "domainText": "Connect as many custom domains as you want to your website",
     "workSafe": "Sleep well at night",
     "workSafeText": "Your website is safe with us"
   },
@@ -134,20 +134,20 @@
   "aboutUs": {
     "title": "About us",
     "p1": "<strong>We are crazy about the web </strong>",
-    "p2": "Founded in São Paulo in the end of 2015, habemus is a startup that creates tools and provides users with services that encourage development besides sharing web technology around the world.",
-    "p3": "Our team is composed by idealistic people who believe changing reality is completely possible when empowering more people to create technology.",
+    "p2": "Founded in São Paulo in the end of 2015, habemus is a technology startup that creates tools and provides services that simplify software development and stimulate tech knowledge sharing around the world.",
+    "p3": "Our team is composed by idealistic people who believe in changing reality by empowering more people to create technology.",
     "readMore": "Read more",
     "ourTeam": "Our Team",
     "lucianaTitle": "cofounder, designer, programmer, educator",
-    "lucianaText": "Graduated in design, she started learning programming in order to achieve more autonomy in building her ideas. She believes in  potential for positive social impact of technology. Cofounder and teacher of web programming at PrograMaria as well.",
-    "simonTitle": "cofounder, software engineer, philosopher",
-    "simonText": "Started learning Economy, but quit school to dive deeply into software web development. Worked as CTO of Fábrica de Aplicativos, a brazilian startup whose main product is a platform for building mobile apps without having to code.",
+    "lucianaText": "Graduated in design, she started learning programming in order to achieve more autonomy in building her ideas. She believes in the potential for positive social impact of technology. Cofounder and teacher of web programming at PrograMaria as well.",
+    "simonTitle": "cofounder, software engineer",
+    "simonText": "Started Economics at Universidade de São Paulo, but quit school to dive deeply into web development. Has had some experience with start-ups. Nowadays Simon is completely focused on the task of empowering people through the dissemination of tech-knowledge.",
     "joinTeam": "Join our team",
-    "joinTeamText": "We're looking for people who also love building web technology so than we can add love to our team!",
+    "joinTeamText": "We're looking for people who also love building the web and that can bring even more love to our team!",
     "sendMsg": "Send us a message and let's have a coffee",
     "name": "Your name",
     "email": "Your e-mail",
-    "linkedinFacebook": "Linkedin and/or Facebook",
+    "linkedinFacebook": "Linkedin and/or Twitter",
     "aboutYou": "Tell us a little bit about you! <br>What's your story? How did you get to know habemus? <br>Why are you interested in working with us?",
     "sendMessage": "send message"
   },

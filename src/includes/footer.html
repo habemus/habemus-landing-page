@@ -35,9 +35,16 @@
         </nav>
       </div>
       <div class="language-buttons">
-        <a href="http://example.com" class="active">Pt </a>
+        {% if lang === "pt-BR" %}
+        <a href="/pt-BR/{{ file.path }}" class="active">Pt </a>
         <span> | </span>
-        <a href="http://example.com"> En</a>
+        <a href="/{{ file.path }}"> En</a>
+        {% endif %}
+        {% if lang === "en-US" %}
+        <a href="/pt-BR/{{ file.path }}">Pt </a>
+        <span> | </span>
+        <a href="/{{ file.path }}" class="active"> En</a>
+        {% endif %}
       </div>
     </div>
   </section>
