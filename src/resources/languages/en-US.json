@@ -5,13 +5,20 @@
     "buildProjects": [
       "an amazing website",
       "a parallax animation",
-      "an angular.js webapp", 
+      "an angular.js webapp",
       "an interactive D3.js data viz",
       "anything you can imagine",
       "the web"
     ],
     "subtitle": "with Habemus: the online platform for developing and hosting websites.",
     "startNow": "start now"
+  },
+  "social": {
+    "imgShare": "http://habemus.io/resources/img/social/habemus-en.png",
+    "title": "Habemus: web development and hosting",
+    "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, nuvem, programming, code",
+    "description": "Habemus is the online platform for developing and hosting websites. Build the web with us.",
+    "facebookDescription": "The online platform for developing and hosting websites."
   },
   "sectionCode": {
     "h2": "Your code, your style, exactly the way you want",
@@ -36,7 +43,7 @@
     "shareableUrl": "Shareable preview url",
     "shareableUrlText": "Collaborate with other people by letting them access your website from any browser while it is in development",
     "codeInterfaceConnected": "Code and preview visually connected",
-    "codeInterfaceConnectedText": "Inspect the preview to find the corresponding source code" 
+    "codeInterfaceConnectedText": "Inspect the preview to find the corresponding source code"
   },
   "sectionPublish": {
     "h1": "Publish",
@@ -122,7 +129,7 @@
   },
   "randomWords": [
     "web",
-    "empowerment", 
+    "empowerment",
     "creativity",
     "achievement",
     "transformation",
@@ -143,7 +150,7 @@
     "pudin",
     "brigadeiro",
     "everything",
-    "coffee", 
+    "coffee",
     "☘",
     "🤓",
     "👾",
