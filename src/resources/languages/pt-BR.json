@@ -3,10 +3,10 @@
     "build": "construa",
     "interactionBuiltWith": "interação construída com ",
     "buildProjects": [
-      "uma landing page incrível", 
-      "um website atraente", 
+      "uma landing page incrível",
+      "um website atraente",
       "uma animação parallax",
-      "um webapp angular", 
+      "um webapp angular",
       "uma visualização de dados interativa",
       "um game",
       "qualquer coisa que puder imaginar",
@@ -15,6 +15,13 @@
     ],
     "subtitle": "com a Habemus: a plataforma online para desenvolver e hospedar seus websites.",
     "startNow": "comece agora"
+  },
+  "social": {
+    "imgShare": "http://habemus.io/resources/img/social/habemus-en.png",
+    "title": "Habemus: desenvolvimento e hospedagem web",
+    "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, hospedagem, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, desenvolvimento, nuvem, programação, código",
+    "description": "Habemus é a plataforma online para desenvolver e hospedar seus websites.",
+    "facebookDescription": "A plataforma online para desenvolver e hospedar seus websites."
   },
   "sectionCode": {
     "h1": "Crie experiências perfeitas até o último pixel",
@@ -39,7 +46,7 @@
     "shareableUrl": "Url de preview compartilhável",
     "shareableUrlText": "Acesse seu projeto de qualquer dispositivo durante o desenvolvimento",
     "codeInterfaceConnected": "Código e interface visualmente conectados",
-    "codeInterfaceConnectedText": "Inspecione o preview e encontre o código correspondente" 
+    "codeInterfaceConnectedText": "Inspecione o preview e encontre o código correspondente"
   },
   "sectionPublish": {
     "h1": "Publique",
@@ -125,7 +132,7 @@
   },
   "randomWords": [
     "web",
-    "empoderamento", 
+    "empoderamento",
     "criatividade",
     "realização",
     "transformação",
@@ -146,7 +153,7 @@
     "pudim",
     "brigadeiro",
     "tudo",
-    "café", 
+    "café",
     "☘",
     "🤓",
     "👾",
