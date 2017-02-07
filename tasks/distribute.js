@@ -41,7 +41,7 @@ function isCss(file) {
 }
 
 module.exports = function (gulp) {
-  gulp.task('distribute', ['translate', 'less'], function () {
+  gulp.task('distribute:prepare', ['translate', 'less'], function () {
     
     if (!process.env.H_ACCOUNT_SERVER_URI) {
       throw new Error('H_ACCOUNT_SERVER_URI env var MUST be defined');
@@ -65,7 +65,7 @@ module.exports = function (gulp) {
   });
 
   // Generate & Inline Critical-path CSS
-  gulp.task('distribute:critical', ['distribute'], function () {
+  gulp.task('distribute', ['distribute:prepare'], function () {
     
     var pages = ['dist/*.html', 'dist/pt-BR/*.html'];
     
