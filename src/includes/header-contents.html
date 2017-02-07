@@ -1,12 +1,13 @@
 <div id="header-container">
   <a href="index.html" id="logo">
-    <img id="logo-dark" src="resources/img/logo-dark.svg">
-    <img id="logo-light" src="resources/img/logo-light.svg">
+    <img id="logo-dark" src="{{ siteURL }}/resources/img/logo-dark.svg">
+    <img id="logo-light" src="{{ siteURL }}/resources/img/logo-light.svg">
   </a>
   <div id="menu">
     <nav>
       <ul>
-        <li><a href="index.html" class="menu-item active">{{ t.nav.home }}</a></li>
+        <li>
+          <a href="{{ siteURL }}/index.html" class="menu-item {% if file.path === 'index.html' %} active {% endif %}">{{ t.nav.home }}</a></li>
         <li>
           {% if lang === "pt-BR" %}
           <a
@@ -24,7 +25,14 @@
           {% endif %}
         </li>
         <li><a href="http://blog.habemus.website" class="menu-item">{{ t.nav.blog }}</a></li>
-        <li><a href="contact.html" class="menu-item">{{ t.nav.contact }}</a></li>
+        <li>
+          <a
+            href="{{ siteURL }}/contact.html"
+            class="menu-item {% if file.path === 'contact.html' %} active {% endif %}"
+            >
+            {{ t.nav.contact }}
+          </a>
+        </li>
         <li data-auth="logged-out">
           <a href="#login" class="open-login-form">{{ t.nav.login }}</a>
         </li>

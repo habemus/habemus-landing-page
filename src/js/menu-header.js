@@ -6,8 +6,8 @@ $(function () {
   var isOriginallyLight = $header.hasClass("light");
 
   // check if color of header is originally light
-  $(window).scroll(function() {
 
+  function handleScroll() {
     if ($(this).scrollTop() > 20){
       $header.addClass("smaller");
 
@@ -21,7 +21,9 @@ $(function () {
         $header.addClass("light");
       }
     }
-  });
+  }
+  $(window).scroll(handleScroll);
+  handleScroll();
 
   // open and close right-command
   $rightCommand.on('click', function (e) {

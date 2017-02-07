@@ -11,6 +11,7 @@ const gulpPrepareTranslations = require('gulp-prepare-translations');
 const fse = require('fs-extra');
 
 const SRC_DIR = path.join(__dirname, '../src');
+const LEGAL_DIR = path.join(__dirname, '../legal');
 const DIST_DIR = path.join(__dirname, '../tmp-translated');
 
 function isHtml(file) {
@@ -50,12 +51,28 @@ module.exports = function (gulp) {
           isMain: langCode === mainLangCode,
         };
       });
+
+    // legal texts
+    var legalTexts = {
+      'en-US': {
+        privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
+        termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/en-US.html', 'utf8'),
+      },
+      'pt-BR': {
+        // using en-US for pt-BR replacement
+        // TODO: translate
+        privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
+        termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/pt-BR.html', 'utf8'),
+      },
+    };
     
     var translationStreams = languages.map((lang) => {
       
       var baseCompileContext = {
+        siteURL: '',
         lang: lang.code,
         t: lang.translations,
+        legal: legalTexts[lang.code],
       };
       
       var stream = gulp.src(SRC_DIR + '/**/*')
@@ -79,6 +96,22 @@ module.exports = function (gulp) {
         return stream.pipe(gulp.dest(DIST_DIR + '/' + lang.code));
       }
     });
+
+    // // legal translation streams
+    // // TODO: improve logic
+    // var legalStreams = languages.map((lang) => {
+
+    //   var stream = gulp.src(LEGAL_DIR + '/' + lang.code + '/**/*')
+    //     .pipe(nunjucks.compile(null, {
+    //       autoescape: false
+    //     }));
+
+    //   if (lang.isMain) {
+    //     return stream.pipe(gulp.dest(DIST_DIR + '/legal'));
+    //   } else {
+    //     return stream.pipe(gulp.dest(DIST_DIR + '/' + lang.code + '/legal'));
+    //   }
+    // });
     
     return mergeStream.apply(null, translationStreams);
   });
