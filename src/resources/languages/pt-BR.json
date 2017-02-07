@@ -76,7 +76,7 @@
     "login": "entrar",
     "logOut": "sair",
     "starterProjects": "projetos base",
-    "goToDashboard": "go to dashboard"
+    "goToDashboard": "dashboard"
   },
   "footer": {
     "starterProjects": "Projetos Base",

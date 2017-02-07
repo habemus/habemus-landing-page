@@ -5,6 +5,10 @@ $(function () {
   aux.degreesToRadians = function (degrees) {
     return degrees * Math.PI / 180; 
   };
+  // http://stackoverflow.com/questions/19689715/what-is-the-best-way-to-detect-retina-support-on-a-device-using-javascript
+  aux.isHighDensity = function() {
+    return ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3));
+  };
   
   // constants
   const IS_MOBILE = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -55,11 +59,14 @@ $(function () {
       x: Common.random(-0.2, 0.2),
       y: Common.random(0.2, 2),
     };
+
+    var pixelRatio = aux.isHighDensity() ? 2 : 1;
     
     var render = Render.create({
       canvas: canvas,
       engine: engine,
       options: {
+        pixelRatio: pixelRatio,
         width: canvasWidth,
         height: canvasHeight,
         wireframes: false,

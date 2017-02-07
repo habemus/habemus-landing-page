@@ -73,7 +73,7 @@
     "login": "login",
     "logOut": "log out",
     "starterProjects": "starter projects",
-    "goToDashboard": "go to dashboard"
+    "goToDashboard": "dashboard"
   },
   "footer": {
     "starterProjects": "Starter Projects",
