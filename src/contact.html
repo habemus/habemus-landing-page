@@ -16,7 +16,7 @@
         <p>{{ t.contact.contactP1 }}</p>
         <p>{{ t.contact.contactP2 }}</p>
         <p>{{ t.contact.contactP3 }}</p>
-        <form action="http://formspree.io/lucianaheuko@gmail.com" method="post" id="contact-form">
+        <form action="//formspree.io/hello@habem.us" method="post" id="contact-form">
           <input type="hidden" name="_subject" value="Novo contato!" />
           <input type="hidden" name="_cc" value="simonxd@gmail.com" />
           <div
@@ -50,7 +50,9 @@
             <div class="field-error-message"></div>
           </div>
 
-          <button type="submit" class="button primary" data-i18n="submitButton">{{ t.contact.sendMessage }}</button>
+          <div class="field-container">
+            <button type="submit" class="button primary" data-i18n="submitButton">{{ t.contact.sendMessage }}</button>
+          </div>
           <div class="form-status"> </div>
         </form>
       </section>
