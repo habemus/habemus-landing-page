@@ -6,7 +6,7 @@
   </head>
   <body>
     {% include "includes/header-light.html" %}
-    
+
     <div class="about-opening">
       <h1>{{ t.aboutUs.title }}</h1>
     </div>
@@ -42,7 +42,7 @@
         </article>
       </div>
     </section>
-    <section class="about-form-container">
+    <section class="about-form-container" id="work-with-us">
       <div class="about-form">
         <h2>{{ t.aboutUs.joinTeam }}!</h2>
         <p>
@@ -97,17 +97,17 @@
             ></textarea>
             <div class="field-error-message"></div>
           </div>
-          
+
           <button type="submit" class="button primary" data-i18n="submitButton">{{ t.aboutUs.sendMessage }}</button>
           <div class="form-status"> </div>
         </form>
       </div>
     </section>
-    
+
     {% include "includes/footer.html" %}
-    
+
     {% include "includes/shared-scripts.html" %}
-    
+
     {% include "includes/shared-scripts-async.html" %}
   </body>
 </html>
