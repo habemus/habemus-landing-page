@@ -14,7 +14,8 @@
     "startNow": "start now"
   },
   "social": {
-    "imgShare": "http://habemus.io/resources/img/social/habemus-en.png",
+    "shareURL": "https://habemus.io/",
+    "imgShare": "https://habemus.io/resources/img/social/habemus-en.png",
     "title": "Habemus: web development and hosting",
     "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, nuvem, programming, code",
     "description": "Habemus is the online platform for developing and hosting websites. Build the web with us.",

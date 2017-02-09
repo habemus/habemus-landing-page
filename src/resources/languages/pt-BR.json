@@ -17,7 +17,8 @@
     "startNow": "comece agora"
   },
   "social": {
-    "imgShare": "http://habemus.io/resources/img/social/habemus-en.png",
+    "shareURL": "https://habemus.io/pt-BR/",
+    "imgShare": "https://habemus.io/resources/img/social/habemus-pt.png",
     "title": "Habemus: desenvolvimento e hospedagem web",
     "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, hospedagem, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, desenvolvimento, nuvem, programação, código",
     "description": "Habemus é a plataforma online para desenvolver e hospedar seus websites.",
