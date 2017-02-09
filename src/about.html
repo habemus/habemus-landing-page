@@ -6,7 +6,7 @@
   </head>
   <body>
     {% include "includes/header-light.html" %}
-    
+
     <div class="about-opening">
       <h1>{{ t.aboutUs.title }}</h1>
     </div>
@@ -52,7 +52,7 @@
         <p>
           {{ t.aboutUs.sendMsg }} \o/
         </p>
-        <form action="http://formspree.io/hello@habem.us" method="post">
+        <form action="//formspree.io/hello@habem.us" method="post" id="work-with-us-form">
           <input type="hidden" name="_subject" value="Novo membro para o time!" />
           <input type="hidden" name="_cc" value="simonxd@gmail.com" />
           <div
@@ -97,17 +97,22 @@
             ></textarea>
             <div class="field-error-message"></div>
           </div>
-          
-          <button type="submit" class="button primary" data-i18n="submitButton">{{ t.aboutUs.sendMessage }}</button>
+
+          <div class="field-container">
+              <button type="submit" class="button primary" data-i18n="submitButton">{{ t.aboutUs.sendMessage }}</button>
+          </div>
+
+
           <div class="form-status"> </div>
         </form>
       </div>
     </section>
-    
+
     {% include "includes/footer.html" %}
-    
+
     {% include "includes/shared-scripts.html" %}
-    
+    <script src="{{ siteURL }}/js/work-with-us-form.js" type="text/javascript" charset="utf-8"></script>
+
     {% include "includes/shared-scripts-async.html" %}
   </body>
 </html>

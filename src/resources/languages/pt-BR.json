@@ -109,7 +109,10 @@
     "sendMessage": "enviar menssagem",
     "location": "Localização",
     "followUs": "Siga-nos",
-    "workWithUs": "Entre para o nosso time!"
+    "workWithUs": "Entre para o nosso time!",
+    "sending": "Enviando mensagem...",
+    "success": "Mensagem enviada. Retornaremos em breve",
+    "error": "Ocorreu algum erro, por favor tente novamente"
   },
   "aboutUs": {
     "title": "Sobre nós",

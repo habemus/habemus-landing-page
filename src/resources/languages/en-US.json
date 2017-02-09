@@ -106,7 +106,10 @@
     "sendMessage": "send message",
     "location": "Location",
     "followUs": "Follow us",
-    "workWithUs": "Work with us!"
+    "workWithUs": "Work with us!",
+    "sending": "Sending message...",
+    "success": "Message sent. We'll reply soon",
+    "error": "Something went wrong, please try again"
   },
   "aboutUs": {
     "title": "About us",
