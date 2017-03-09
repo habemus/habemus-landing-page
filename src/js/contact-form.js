@@ -13,7 +13,7 @@ $(function () {
 
   	e.preventDefault();
   	$.ajax({
-  		url: 'http://formspree.io/hello@habem.us',
+  		url: '//formspree.io/hello@habem.us',
   		method: 'POST',
       data: {
         message:

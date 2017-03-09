@@ -14,7 +14,7 @@ $(function () {
 
   	e.preventDefault();
   	$.ajax({
-  		url: 'http://formspree.io/hello@habem.us',
+  		url: '//formspree.io/hello@habem.us',
   		method: 'POST',
       data: {
         message:
@@ -25,7 +25,7 @@ $(function () {
         'message: ' + message,
         _cc: cc,
         _replyto: email,
-        _subject: 'New wanna be member ' + name
+        _subject: 'New team member ' + name
       },
 
   		dataType: 'json',
