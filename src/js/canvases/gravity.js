@@ -57,10 +57,13 @@ $(function () {
     // define world-wide configs
     world.gravity = {
       x: Common.random(-0.2, 0.2),
+      // y: 1.4,
       y: Common.random(0.2, 2),
     };
 
-    var pixelRatio = aux.isHighDensity() ? 2 : 1;
+    // pixelRatio 2 makes experience laggy
+    // var pixelRatio = aux.isHighDensity() ? 2 : 1;
+    var pixelRatio = aux.isHighDensity() ? 1 : 1;
     
     var render = Render.create({
       canvas: canvas,
@@ -163,26 +166,29 @@ $(function () {
     ]);
     
     if (!IS_MOBILE) {
-      // add obstacle for the button
-      var startNowButtonPos = $('#start-now-buttons').offset();
-      var startNowButtonH = $('#start-now-buttons').height();
-      var startNowButtonW = $('#start-now-buttons').width();
-      
-      // obstacle
-      World.add(world, Bodies.rectangle(
-        startNowButtonPos.left + (startNowButtonW/2),
-        startNowButtonPos.top + (startNowButtonH/2),
-        startNowButtonW,
-        startNowButtonH,
-        {
-          isStatic: true,
-          render: {
-            fillStyle: 'transparent',
-            strokeStyle: 'transparent',
-            lineWidth: 0,
+
+      setTimeout(function () {
+        // add obstacle for the button
+        var startNowButtonPos = $('#start-now-buttons').offset();
+        var startNowButtonH = $('#start-now-buttons').height();
+        var startNowButtonW = $('#start-now-buttons').width();
+        
+        // obstacle
+        World.add(world, Bodies.rectangle(
+          startNowButtonPos.left + (startNowButtonW/2),
+          startNowButtonPos.top + (startNowButtonH/2),
+          startNowButtonW,
+          startNowButtonH,
+          {
+            isStatic: true,
+            render: {
+              fillStyle: 'transparent',
+              strokeStyle: 'transparent',
+              lineWidth: 0,
+            }
           }
-        }
-      ));
+        ));
+      }, 300);
     }
     
     
