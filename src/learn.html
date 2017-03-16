@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "includes/shared-head.html" %}
+    <link rel="stylesheet" href="css/learn.css">
+  </head>
+  <body>
+    {% include "includes/header-learn.html" %}
+
+    <div class="learn-opening">
+      <div class="opening-content">
+        <h1>{{ t.learn.openingTitle }}</h1>
+        <h2>{{ t.learn.openingSubtitle }}</h2>
+      </div>
+    </div>
+    <section id="learn-webeditor">
+      <article class="learn-content" id="learn-upload">
+        <h1>{{ t.learn.uploadProject }}</h1>
+        <p>{{ t.learn.uploadProjectText }}</p>
+        <div class="beginner">
+          <p>{{ t.learn.areYouBeginner }}</p>
+          <div id="beginner-popup">
+            <p>{{ t.learn.startTutorials }}</p>
+            <a href="#" class="button">{{ t.learn.tutorial1 }}</a>
+            <!-- <a href="#" class="button">tutorial 2</a> -->
+          </div>
+        </div>
+      </article>
+      <div id="webeditor-image">
+        <section id="learn-chat-text">
+          <h1>{{ t.learn.chatWithUs }}</h1>
+          <p>{{ t.learn.chatWithUsText }}</p>
+        </section>
+        <div id="learn-chat-woman">
+          <img src="resources/img/learn/learn-chat-woman.svg" alt="Chat with us help">
+        </div>
+        <div id="learn-chat-box">
+          <img src="resources/img/learn/learn-chat-woman.png" alt="Chat help box">
+        </div>
+        <!-- <img
+          src="resources/img/webeditor-1-code.jpg"
+          alt="editor de código online da Habemus" title="Webeditor Habemus"> -->
+        <div class="overflow-hidden">
+          <img
+            class="lazyload"
+            data-src="resources/img/webeditor-learn.jpg"
+            data-srcset="resources/img/webeditor-1-code.2x.png 2x"
+            alt="editor de código online da Habemus" title="Webeditor Habemus">
+        </div>
+      </div>
+    </section>
+    <section id="learn-jobdone">
+      <div class="learn-content">
+        <h1>{{ t.learn.jobDone }}</h1>
+        <p>{{ t.learn.jobDoneText }}</p>
+        <section id="learn-jobdone-topics">
+          <figure>
+            <img src="resources/img/learn/topic-bug.svg" alt="Solve tricky bugs">
+            <figcaption>{{ t.learn.bugs }}</figcaption>
+          </figure>
+          <figure>
+            <img src="resources/img/learn/topic-structure.svg" alt="Get ideas on how to structure your website">
+            <figcaption>{{ t.learn.structure }}</figcaption>
+          </figure>
+          <figure>
+            <img src="resources/img/learn/topic-skills.svg" alt="Get tips on improving your skills">
+            <figcaption>{{ t.learn.skills }}</figcaption>
+          </figure>
+        </section>
+      </div>
+    </section>
+    <section id="learn-pricing">
+      <div class="learn-content">
+        <h1>{{ t.learn.pricing }}</h1>
+        <div class="price">
+          <h1>
+            R$
+            <span>0</span>
+          </h1>
+        </div>
+        <p>{{ t.learn.freeDuringBeta }}
+        </p>
+        <a href="#" class="button primary">{{ t.learn.tryForFree }}</a>
+        <p><b>*</b>{{ t.learn.betaAvailable }}</p>
+      </div>
+      <img src="resources/img/learn/woman-beta.svg" alt="free during beta" id="woman-beta">
+    </section>
+    <section id="learn-we">
+      <h1>{{ t.learn.whoWeAre }}</h1>
+      <div class="team-members">
+        <article>
+          <a href="https://www.linkedin.com/in/luciana-heuko-a02b0870/" target="_blank">
+            <img src="resources/img/learn/luciana-heuko.png" alt="luciana heuko" >
+          </a>
+          <h1>Luciana Heuko</h1>
+          <p>{{ t.learn.lucianaText }}
+          </p>
+        </article>
+        <article>
+          <a href="https://www.linkedin.com/in/simon-fan-a762ab6b/" target="_blank">
+            <img src="resources/img/learn/simon-fan.png" alt="simon fan" >
+          </a>
+          <h1>Simon Fan</h1>
+          <p>{{ t.learn.simonText }}</p>
+        </article>
+      </div>
+    </section>
+
+
+    {% include "includes/footer.html" %}
+
+    {% include "includes/shared-scripts.html" %}
+    <!-- scrollmagic -->
+    <script type="text/javascript" src="js/learn.js"></script>
+    <script type="text/javascript" src="js/learn/editor.js"></script>
+
+  	<script type="text/javascript" src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+
+    {% include "includes/shared-scripts-async.html" %}
+  </body>
+</html>

@@ -16,7 +16,7 @@
   "social": {
     "imgShare": "http://habemus.io/resources/img/social/habemus-en.png",
     "title": "Habemus: web development and hosting",
-    "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, nuvem, programming, code",
+    "keyWords": "web, website, editor online, code editor, cloud editor, webeditor, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, nuvem, programming, code",
     "description": "Habemus is the online platform for developing and hosting websites. Build the web with us.",
     "facebookDescription": "The online platform for developing and hosting websites."
   },
@@ -91,6 +91,7 @@
     "contact": "Contact",
     "workWithUs": "Work with us",
     "support": "Help",
+    "learn": "Learn",
     "followUs": "Follow us",
     "termsOfService": "Terms of service",
     "privacyPolicy": "Privacy policy"
@@ -129,6 +130,29 @@
     "linkedinFacebook": "Linkedin and/or Twitter",
     "aboutYou": "Tell us a little bit about you! <br>What's your story? How did you get to know habemus? <br>Why are you interested in working with us?",
     "sendMessage": "send message"
+  },
+  "learn": {
+    "openingTitle": "Get <strong>live help</strong> from expert web developers.",
+    "openingSubtitle": "Never get stuck in front-end programming challenges.",
+    "uploadProject": "Upload your project",
+    "uploadProjectText": "Upload your project to Habemus and code online: that way we can collaborate with you and help directly in your project.",
+    "areYouBeginner": "Are you a beginner and have no ongoing project?",
+    "startTutorials": "Start with one of these great introductory tutorials:",
+    "tutorial1": "tutorial 1",
+    "chatWithUs": "Chat with us",
+    "chatWithUsText": "Tell us the details of the problems you need help in solving and we’ll have a look at it.",
+    "jobDone": "We’ll help you get the job done",
+    "jobDoneText": "We’ll dive into your project with you and help solve whatever issue you are facing.",
+    "bugs": "Solve tricky bugs",
+    "structure": "Get ideas on how to structure your website",
+    "skills": "Get tips on improving your skills",
+    "pricing": "Pricing",
+    "freeDuringBeta": "During the <b>beta*</b> all support is <strong>free</strong> of charge! <br>Signup now and specify key “LEARN” on “others” answer field about “how did you get to know habemus” to access our code help desk.",
+    "tryForFree": "try now for FREE",
+    "betaAvailable": "beta available for the first 200 users",
+    "whoWeAre": "Who we are",
+    "lucianaText": "Professional UI and UX designer and developer. She has extensive experience with HTML5, Web Semantics and CSS3. She is also the lead educator at Programaria, a women’s initiative that empowers women with programming.",
+    "simonText": "JavaScript frontend software engineer with great experience with frontend web frameworks and libraries such as Angular, Polymer, jQuery, d3.js, socket.io. He loves helping people build amusing stuff with the web."
   },
   "randomWords": [
     "web",
