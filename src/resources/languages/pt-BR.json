@@ -21,7 +21,7 @@
     "shareURL": "https://habemus.io/pt-BR/",
     "imgShare": "https://habemus.io/resources/img/social/habemus-pt.png",
     "title": "Habemus: desenvolvimento e hospedagem web",
-    "keyWords": "web, website, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, hospedagem, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, desenvolvimento, nuvem, programação, código",
+    "keyWords": "web, website, editor de código, editor online, code editor, editor na nuvem, webeditor, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, hospedagem, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, desenvolvimento, nuvem, programação, código",
     "description": "Habemus é a plataforma online para desenvolver e hospedar seus websites.",
     "facebookDescription": "A plataforma online para desenvolver e hospedar seus websites."
   },
@@ -134,6 +134,29 @@
     "linkedinFacebook": "Linkedin e/ou Twitter",
     "aboutYou": "Conta pra gente um pouco sobre você! <br>Qual é a sua história? Como conheceu a habemus? <br>Por que te interessa trabalhar conosco?",
     "sendMessage": "enviar mensagem"
+  },
+  "learn": {
+    "openingTitle": "Receba <strong>ajuda em tempo real</strong> de desenvolvedores web experientes.",
+    "openingSubtitle": "Nunca mais fique preso em problemas de front-end.",
+    "uploadProject": "Faço o upload do seu projeto",
+    "uploadProjectText": "Suba seu projeto na Habemus e desenvolva online: dessa forma podemos colaborar contigo e te ajudar diretamente no seu projeto.",
+    "areYouBeginner": "Você está começando a aprender agora e ainda não tem um projeto?",
+    "startTutorials": "Inicie sua caminhada com um desses ótimos tutoriais de introdução:",
+    "tutorial1": "tutorial 1",
+    "chatWithUs": "Fale conosco através do nosso chat",
+    "chatWithUsText": "Enquanto desenvolve, conte-nos os detalhes dos problemas que estiver encontrando e nós daremos uma olhada no seu projeto para ajudar a resolvê-los.",
+    "jobDone": "We’ll help you get the job done",
+    "jobDoneText": "Nós mergulharemos junto contigo no seu projeto e ajudaremos a resolver qualquer problema que você estiver encontrando.",
+    "bugs": "Resolva bugs complicados",
+    "structure": "Troque uma ideia sobre a estrutura do seu website",
+    "skills": "Obtenha umas dicas para aprimorar suas habilidades",
+    "pricing": "Preço",
+    "freeDuringBeta": "Durante a versão <b>beta*</b> todo suporte é <strong>gratuito</strong>! <br>Cadastre-se agora e especifique o código “LEARN” no campo de resposta “outros” para a pergunta “como você conheceu a habemus” e receba o acesso à nossa área de suporte.",
+    "tryForFree": "comece agora, é GRÁTIS",
+    "betaAvailable": "versão beta disponível para os primeiros 200 cadastrados",
+    "whoWeAre": "Quem somos nós",
+    "lucianaText": "Designer especializada em UI e UX e desenvolvedora frontend com grande experiência com HTML5, Web semântica e CSS3. Ela também é a educadora responsável da Programaria, uma iniciativa que empodera mulheres através da programação.",
+    "simonText": "Desenvolvedor de software frontend JavaScript com enorme experiência com frameworks e libraries de web como Angular, Polymer, jQuery, d3.js, socket.io. Ele ama ajudar as pessoas a construirem coisas divertidas com a web."
   },
   "randomWords": [
     "web",

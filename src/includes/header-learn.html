@@ -1,0 +1,32 @@
+<header id="header">
+  <div id="header-container">
+    <a href="index.html" id="logo">
+      <img id="logo-dark" src="{{ siteURL }}/resources/img/logo-dark.svg">
+      <img id="logo-light" src="{{ siteURL }}/resources/img/logo-light.svg">
+    </a>
+    <div id="menu">
+
+      <div id="start-now-buttons">
+        <a data-auth="logged-out" href="#login" class="button outline">
+          {{ t.home.startNow }}
+        </a>
+        <a data-auth="logged-in" hidden href="/dashboard" class="button outline">
+          {{ t.home.startNow }}
+        </a>
+      </div>
+
+      <div class="language-buttons">
+        {% if lang === "pt-BR" %}
+        <a href="/pt-BR/{{ file.path }}" class="active">Pt </a>
+        <span> | </span>
+        <a href="/{{ file.path }}"> En</a>
+        {% endif %}
+        {% if lang === "en-US" %}
+        <a href="/pt-BR/{{ file.path }}">Pt </a>
+        <span> | </span>
+        <a href="/{{ file.path }}" class="active"> En</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>
