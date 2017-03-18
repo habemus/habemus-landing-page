@@ -137,10 +137,10 @@
     "openingTitle": "Get <strong>live help</strong> from expert web developers.",
     "openingSubtitle": "Never get stuck in front-end programming challenges.",
     "uploadProject": "Upload your project",
-    "uploadProjectText": "Upload your project to Habemus and code online: that way we can collaborate with you and help directly in your project.",
+    "uploadProjectText": "Upload your HTML5, CSS3 and JavaScript project to Habemus and code online: that way we can collaborate with you and help directly in your project.",
     "areYouBeginner": "Are you a beginner and have no ongoing project?",
     "startTutorials": "Start with one of these great introductory tutorials:",
-    "tutorial1": "tutorial 1",
+    "tutorial1": "basic web pages",
     "chatWithUs": "Chat with us",
     "chatWithUsText": "Tell us the details of the problems you need help in solving and we’ll have a look at it.",
     "jobDone": "We’ll help you get the job done",
@@ -149,12 +149,12 @@
     "structure": "Get ideas on how to structure your website",
     "skills": "Get tips on improving your skills",
     "pricing": "Pricing",
-    "freeDuringBeta": "During the <b>beta*</b> all support is <strong>free</strong> of charge! <br>Signup now and specify key “LEARN” on “others” answer field about “how did you get to know habemus” to access our code help desk.",
+    "freeDuringBeta": "During the <b>beta*</b> all support is <strong>free</strong> of charge! <br>Signup now and type in “LEARN” on “others” answer field about “how did you get to know habemus” to access our code help desk.",
     "tryForFree": "try now for FREE",
     "betaAvailable": "beta available for the first 200 users",
     "whoWeAre": "Who we are",
     "lucianaText": "Professional UI and UX designer and developer. She has extensive experience with HTML5, Web Semantics and CSS3. She is also the lead educator at Programaria, a women’s initiative that empowers women with programming.",
-    "simonText": "JavaScript frontend software engineer with great experience with frontend web frameworks and libraries such as Angular, Polymer, jQuery, d3.js, socket.io. He loves helping people build amusing stuff with the web."
+    "simonText": "JavaScript frontend software engineer with great experience with frontend web frameworks and libraries such as Angular, Polymer, jQuery, d3.js, socket.io. He loves helping people build amazing stuff with the web."
   },
   "randomWords": [
     "web",

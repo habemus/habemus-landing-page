@@ -152,7 +152,7 @@
 
   #learn-chat-text {
     position: absolute;
-    top: -240px;
+    top: -200px;
     left: 50%;
     z-index: 2;
     transform: translateX(-50%);
@@ -186,20 +186,27 @@
   #learn-chat-box {
     position: absolute;
     right: 30%;
-    bottom: 0;
+    top: 100%;
     z-index: 2;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.5s ease, transform 1.5s ease;
+    transition: opacity 0.5s ease, border .3s ease;
+    transform: translateY(-20%);
+
+    border: 2px solid transparent;
+
+    width: 15%;
 
     img {
       display: block;
+      width: 100%;
     }
-
 
     &.active {
       opacity: 1;
-      transform: translateY(0);
+    }
+
+    &.highlight {
+      border: 2px solid #0adda6;
     }
   }
 }
@@ -292,10 +299,14 @@ p {
     position: absolute;
     bottom: 30%;
     right: -15%;
-    display: block;
-    width: 40%;
+    width: 40vw;
     max-width: 562px;
     min-width: 70px;
+
+    > img {
+      display: block;
+      width: 100%;
+    }
   }
 }
 

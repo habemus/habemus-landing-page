@@ -21,7 +21,10 @@
           <p>{{ t.learn.areYouBeginner }}</p>
           <div id="beginner-popup">
             <p>{{ t.learn.startTutorials }}</p>
-            <a href="#" class="button">{{ t.learn.tutorial1 }}</a>
+            <a
+              href="https://internetingishard.com/html-and-css/basic-web-pages/"
+              class="button"
+              target="_blank">{{ t.learn.tutorial1 }}</a>
             <!-- <a href="#" class="button">tutorial 2</a> -->
           </div>
         </div>
@@ -35,7 +38,7 @@
           <img src="resources/img/learn/learn-chat-woman.svg" alt="Chat with us help">
         </div>
         <div id="learn-chat-box">
-          <img src="resources/img/learn/learn-chat-woman.png" alt="Chat help box">
+          <img src="resources/img/learn/learn-chat-box-sm.png" alt="Chat help box">
         </div>
         <!-- <img
           src="resources/img/webeditor-1-code.jpg"
@@ -80,10 +83,17 @@
         </div>
         <p>{{ t.learn.freeDuringBeta }}
         </p>
-        <a href="#" class="button primary">{{ t.learn.tryForFree }}</a>
+        <a data-auth="logged-out" href="#login" class="button primary">
+          {{ t.learn.tryForFree }}
+        </a>
+        <a data-auth="logged-in" hidden href="/dashboard" class="button primary">
+          {{ t.learn.tryForFree }}
+        </a>
         <p><b>*</b>{{ t.learn.betaAvailable }}</p>
       </div>
-      <img src="resources/img/learn/woman-beta.svg" alt="free during beta" id="woman-beta">
+      <div id="woman-beta">
+        <img src="resources/img/learn/woman-beta.svg" alt="free during beta">
+      </div>
     </section>
     <section id="learn-we">
       <h1>{{ t.learn.whoWeAre }}</h1>
@@ -113,6 +123,7 @@
     <!-- scrollmagic -->
     <script type="text/javascript" src="js/learn.js"></script>
     <script type="text/javascript" src="js/learn/editor.js"></script>
+    <script type="text/javascript" src="js/learn/beta.js"></script>
 
   	<script type="text/javascript" src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 
