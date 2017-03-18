@@ -13,7 +13,7 @@
   50% { opacity: 0; }
 }
 
-#start-now-buttons {
+#account-buttons {
   opacity: 0;
   transition: opacity 0.5s ease;
 
@@ -79,10 +79,16 @@
     margin: 0 auto;
     cursor: pointer;
 
+    > p {
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+
     &:hover {
       > p {
         color: @habemus-green-dark;
         text-decoration: underline;
+        opacity: 1;
       }
       #beginner-popup {
         display: block;

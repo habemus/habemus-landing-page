@@ -35,7 +35,7 @@ $(function () {
       $imageContainer.find('#learn-chat-text').addClass('active');
     }
 
-    if (e.progress > 0.2) {
+    if (e.progress > 0.1) {
       $imageContainer.find('#learn-chat-woman').addClass('active');
     }
 

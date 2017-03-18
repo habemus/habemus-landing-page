@@ -24,6 +24,14 @@ const GA_SCRIPT = `<script>
 
 </script>`;
 
+// HABEMUS.IO crazy egg script
+const CRAZY_EGG_SCRIPT = `<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0063/0568.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>`;
+
 function isHtml(file) {
   return /\.html$/.test(file.path);
 }
@@ -57,6 +65,7 @@ module.exports = function (gulp) {
       // .pipe(gulpIf(isJs, gulpUglify()))
       .pipe(gulpIf(isHtml, gulpCheerio(function ($, file, done) {
         $('body').append(GA_SCRIPT);
+        $('body').append(CRAZY_EGG_SCRIPT);
         done();
       })))
       .pipe(gulpIf(isCss, gulpCleanCss()))
