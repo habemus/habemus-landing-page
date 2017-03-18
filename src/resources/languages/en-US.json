@@ -134,6 +134,7 @@
     "sendMessage": "send message"
   },
   "learn": {
+    "currency": "$",
     "openingTitle": "Get <strong>live help</strong> from expert web developers.",
     "openingSubtitle": "Never get stuck in front-end programming challenges.",
     "uploadProject": "Upload your project",

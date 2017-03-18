@@ -96,6 +96,7 @@
     "contact": "Contato",
     "workWithUs": "Entre para o time",
     "support": "Suporte",
+    "learn": "Aprenda",
     "followUs": "Siga-nos",
     "termsOfService": "Termos de serviço",
     "privacyPolicy": "Política de privacidade"
@@ -136,9 +137,10 @@
     "sendMessage": "enviar mensagem"
   },
   "learn": {
+    "currency": "R$",
     "openingTitle": "Receba <strong>ajuda em tempo real</strong> de desenvolvedores web experientes.",
     "openingSubtitle": "Nunca mais fique preso em problemas de front-end.",
-    "uploadProject": "Faço o upload do seu projeto",
+    "uploadProject": "Faça o upload do seu projeto",
     "uploadProjectText": "Suba seu projeto HTML5, CSS3 e JavaScript na Habemus e desenvolva online: assim podemos colaborar contigo e te ajudar diretamente no seu código.",
     "areYouBeginner": "Você está começando a aprender agora e ainda não tem um projeto?",
     "startTutorials": "Inicie sua caminhada com um desses ótimos tutoriais de introdução:",

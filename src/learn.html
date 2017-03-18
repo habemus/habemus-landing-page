@@ -15,7 +15,7 @@
     </div>
     <section id="learn-webeditor">
       <article class="learn-content" id="learn-upload">
-        <h1>{{ t.learn.uploadProject }}</h1>
+        <h1>1. {{ t.learn.uploadProject }}</h1>
         <p>{{ t.learn.uploadProjectText }}</p>
         <div class="beginner">
           <p>{{ t.learn.areYouBeginner }}</p>
@@ -31,7 +31,7 @@
       </article>
       <div id="webeditor-image">
         <section id="learn-chat-text">
-          <h1>{{ t.learn.chatWithUs }}</h1>
+          <h1>2. {{ t.learn.chatWithUs }}</h1>
           <p>{{ t.learn.chatWithUsText }}</p>
         </section>
         <div id="learn-chat-woman">
@@ -39,6 +39,7 @@
         </div>
         <div id="learn-chat-box">
           <img src="resources/img/learn/learn-chat-box-sm.png" alt="Chat help box">
+          <div class="chat-cursor"></div>
         </div>
         <!-- <img
           src="resources/img/webeditor-1-code.jpg"
@@ -54,7 +55,7 @@
     </section>
     <section id="learn-jobdone">
       <div class="learn-content">
-        <h1>{{ t.learn.jobDone }}</h1>
+        <h1>3. {{ t.learn.jobDone }}</h1>
         <p>{{ t.learn.jobDoneText }}</p>
         <section id="learn-jobdone-topics">
           <figure>
@@ -77,7 +78,7 @@
         <h1>{{ t.learn.pricing }}</h1>
         <div class="price">
           <h1>
-            R$
+            {{ t.learn.currency }}
             <span>0</span>
           </h1>
         </div>
@@ -89,7 +90,7 @@
         <a data-auth="logged-in" hidden href="/dashboard" class="button primary">
           {{ t.learn.tryForFree }}
         </a>
-        <p><b>*</b>{{ t.learn.betaAvailable }}</p>
+        <p><b>* </b>{{ t.learn.betaAvailable }}</p>
       </div>
       <div id="woman-beta">
         <img src="resources/img/learn/woman-beta.svg" alt="free during beta">
@@ -122,8 +123,8 @@
     {% include "includes/shared-scripts.html" %}
     <!-- scrollmagic -->
     <script type="text/javascript" src="js/learn.js"></script>
+    <script type="text/javascript" src="js/learn/start-now.js"></script>
     <script type="text/javascript" src="js/learn/editor.js"></script>
-    <script type="text/javascript" src="js/learn/beta.js"></script>
 
   	<script type="text/javascript" src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 
