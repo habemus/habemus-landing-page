@@ -11,7 +11,7 @@ $(function () {
    * after its script is loaded.
    */
   var hAccountDialog;
-  var H_ACCOUNT_DIALOG_SCRIPT_SRC = '/bower_components/h-account-client/dist/h-account-dialog.min.js';
+  var H_ACCOUNT_DIALOG_SCRIPT_SRC = '/bower_components/habemus-account-client/dist/h-account-dialog.min.js';
   
   var script = document.createElement('script');
   script.src = H_ACCOUNT_DIALOG_SCRIPT_SRC;

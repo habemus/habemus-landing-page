@@ -20,7 +20,15 @@
     "title": "Habemus: web development and hosting",
     "keyWords": "web, website, editor online, code editor, cloud editor, webeditor, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, nuvem, programming, code",
     "description": "Habemus is the online platform for developing and hosting websites. Build the web with us.",
-    "facebookDescription": "The online platform for developing and hosting websites."
+    "facebookDescription": "The online platform for developing and hosting websites.",
+    "learn": {
+      "url": "https://habemus.io/learn.html",
+      "title": "Online code mentoring",
+      "keyWords": "online code mentoring, code help desk, computer programming mentoring",
+      "description": "Get live help from expert web developers: never get stuck in front-end programming challenges.",
+      "facebookDescription": "Chat online with expert web developers and ask all of your web programming questions! We'll help you analyze your projects and solve any coding issues.",
+      "imgShare": "https://habemus.io/resources/img/social/habemus-learn-en.png"
+    }
   },
   "sectionCode": {
     "h2": "Your code, your style, exactly the way you want",

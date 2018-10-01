@@ -55,14 +55,14 @@ module.exports = function (gulp) {
     // legal texts
     var legalTexts = {
       'en-US': {
-        privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
-        termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/en-US.html', 'utf8'),
+        // privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
+        // termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/en-US.html', 'utf8'),
       },
       'pt-BR': {
         // using en-US for pt-BR replacement
         // TODO: translate
-        privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
-        termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/pt-BR.html', 'utf8'),
+        // privacyPolicy: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/privacy-policy/en-US.html', 'utf8'),
+        // termsOfService: fs.readFileSync(SRC_DIR + '/bower_components/habemus-legal/dist/terms-of-service/pt-BR.html', 'utf8'),
       },
     };
     

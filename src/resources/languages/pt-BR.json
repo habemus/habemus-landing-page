@@ -23,7 +23,15 @@
     "title": "Habemus: desenvolvimento e hospedagem web",
     "keyWords": "web, website, editor de código, editor online, code editor, editor na nuvem, webeditor, hosting, host, cloud, in the cloud, server, static, webpage, site, html, css, js, javascript, hospedagem, locaweb, uolhost, dreamhost, bluehost, hostgator, cloud9, c9, development, develop, desenvolvimento, nuvem, programação, código",
     "description": "Habemus é a plataforma online para desenvolver e hospedar seus websites.",
-    "facebookDescription": "A plataforma online para desenvolver e hospedar seus websites."
+    "facebookDescription": "A plataforma online para desenvolver e hospedar seus websites.",
+    "learn": {
+      "url": "https://habemus.io/pt-BR/learn.html",
+      "title": "Mentoria de programação web online",
+      "keyWords": "mentoria de programação, suporte de programação ao vivo, tutoria de programação, aprender a programar",
+      "description": "Receba tutoria em programação web: nunca mais fique preso em problemas de desenvolvimento front-end.",
+      "facebookDescription": "Converse online com desenvolvedores web experientes e tire todas as suas dúvidas de programação web!",
+      "imgShare": "https://habemus.io/resources/img/social/habemus-learn-pt.png"
+    }
   },
   "sectionCode": {
     "h1": "Crie experiências perfeitas até o último pixel",
