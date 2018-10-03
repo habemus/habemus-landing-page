@@ -76,15 +76,15 @@ module.exports = function (gulp) {
   // Generate & Inline Critical-path CSS
   gulp.task('distribute', ['distribute:prepare'], function () {
     
-    var pages = ['dist/*.html', 'dist/pt-BR/*.html'];
+    // var pages = ['dist/*.html', 'dist/pt-BR/*.html'];
     
-    return gulp.src(pages, { base: 'dist' })
-      .pipe(critical({
-        base: 'dist/',
-        inline: true,
-        ignore: ['@font-face',/url\(/],
-      }))
-      // .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
-      .pipe(gulp.dest('dist'));
+    // return gulp.src(pages, { base: 'dist' })
+    //   // .pipe(critical({
+    //   //   base: 'dist/',
+    //   //   inline: true,
+    //   //   ignore: ['@font-face',/url\(/],
+    //   // }))
+    //   // .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
+    //   .pipe(gulp.dest('dist'));
   });
 };
